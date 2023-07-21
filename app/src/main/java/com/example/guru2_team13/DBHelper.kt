@@ -33,12 +33,12 @@ class DBHelper(context: Context) :
         return res
     }
     // id가 존재하는지, password 입력되었는지 확인 (안됐다면 false)
-    fun checkUserpass(ㅑㅇ: String, password: String) : Boolean {
+    fun checkUserpass(id: String, password: String) : Boolean {
         val MyDB = this.writableDatabase
         var res = true
         val cursor = MyDB.rawQuery(
             "Select * from users where id = ? and password = ?",
-            arrayOf(ㅑㅇ, password)
+            arrayOf(id, password)
         )
         if (cursor.count <= 0) res = false
         return res
