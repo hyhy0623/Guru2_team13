@@ -8,42 +8,39 @@
     android:orientation="vertical"
     tools:context=".BoardWrite">
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/write_title"
+        android:padding="16dp"
+        android:background="#00ff0000"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="70dp"
+        android:hint="제목" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="제목" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="#eeeeee"/>
 
-        <EditText
-            android:id="@+id/write_title"
-            android:padding="16dp"
-            android:background="#eeeeee"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="제목을 입력하세요." />
-    </LinearLayout>
+    <ImageButton
+        android:id="@+id/image_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/imageplusbutton"
+        android:background="#00ff0000"/>
 
     <EditText
         android:id="@+id/write_content"
         android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="#eeeeee"
+        android:layout_height="400dp"
+        android:background="#00ff0000"
         android:hint="내용을 입력하세요."
-        />
+        android:gravity="top"/>
 
     <Button
-        android:id="@+id/reg_button"
+        android:id="@+id/write_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="등록하기"
-        android:background="#C62828"/>
+        android:text="등록하기" />
 
 </LinearLayout>

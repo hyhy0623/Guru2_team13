@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".BoardWrite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="제목" />
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="마크정식 존맛탱구리" />
+
+        <CheckBox
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:button="@android:color/transparent"
+            android:background="@drawable/bookmark"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="@color/black"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:src="@drawable/recipe1"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="갓세븐 마크정식 레시피\n\n~이 레시피는 갓세븐 마크와 1도 연관이 없으나 깃세븐 마크 빠수니가 만들었기때문에 마크정식입니다~\n\n재료 준비 : 콕콕콕 스파게티, 자이언트 떡볶이, 치즈, 의성마늘후랑크\n\n(1) 떡볶이와 스파게티 제조 후 두 개를 섞~섞~골고루 잘 썩어쥼미다.\n(2) 그 위에 소세지를 썰어서 올려주고 치르를 뿌려줍니다.\n(3) 치즈가 녹을 수 있도록 뚜껑을 살짝 덮고 전자렌지에 30초 정도 돌려줍니다.\n\n뚜껑을 열면 완성!!!!!!!!!!"
+        android:background="#00ff0000"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="20dp" />
+
+</LinearLayout>
