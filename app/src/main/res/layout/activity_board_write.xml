@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".BoardWrite">
+
+    <EditText
+        android:id="@+id/write_title"
+        android:padding="16dp"
+        android:background="#00ff0000"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="제목" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="#eeeeee"/>
+
+    <ImageButton
+        android:id="@+id/image_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/imageplusbutton"
+        android:background="#00ff0000"/>
+
+    <EditText
+        android:id="@+id/write_content"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#00ff0000"
+        android:hint="내용을 입력하세요."
+        android:gravity="top"/>
+
+    <Button
+        android:id="@+id/write_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="등록하기" />
+
+</LinearLayout>
