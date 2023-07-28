@@ -1,9 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MyNewProductActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="관심 신제품"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:id="@+id/rGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/allBtn"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/radio_all" />
+            <RadioButton
+                android:id="@+id/CUBtn"
+                android:checked="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/radio_cu" />
+            <RadioButton
+                android:id="@+id/GSBtn"
+                android:checked="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/radio_gs"/>
+            <RadioButton
+                android:id="@+id/SEBtn"
+                android:checked="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/radio_se"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cu4" />
+
+                    <TextView
+                        android:id="@+id/productName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#CU #더블초코맘모스빵 #고대"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/checkbox_heart"
+                        android:checked="true"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+                <FrameLayout
+                    android:id="@+id/product2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/gs1" />
+
+                    <TextView
+                        android:id="@+id/productName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#GS 행운약과라떼 #유어스"
+                        android:textSize="18sp"/>
+                    <CheckBox
+                        android:id="@+id/heartCheck2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/checkbox_heart"
+                        android:checked="true"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+                <FrameLayout
+                    android:id="@+id/product3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+                    <ImageView
+                        android:id="@+id/productImage3"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/gs3" />
+                    <TextView
+                        android:id="@+id/productName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#GS #솔티카라멜휘낭시에 #브레디크"
+                        android:textSize="18sp"/>
+                    <CheckBox
+                        android:id="@+id/heartCheck3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/checkbox_heart"
+                        android:checked="true"/>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
