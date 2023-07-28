@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="380dp"
         android:orientation="vertical"
-        android:paddingLeft="90dp"
-        android:paddingRight="90dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,7 +28,7 @@
             android:ems="10"
             android:hint="아이디"
             android:inputType="text"
-            android:paddingLeft="8dp"
+            android:paddingLeft="9dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#8DFFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +82,7 @@
             android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:layout_marginBottom="17dp"
+            android:layout_marginBottom="19dp"
             android:layout_gravity="center"
             android:background="#00FF0000"
             app:srcCompat="@drawable/login" />
