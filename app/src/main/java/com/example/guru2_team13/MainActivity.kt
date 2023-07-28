@@ -1,18 +1,22 @@
 package com.example.guru2_team13
 
 import android.content.Intent
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
-    lateinit var btnLogin: Button
+    lateinit var btnLogin: ImageButton
     lateinit var editTextId: EditText
     lateinit var editTextPassword: EditText
     lateinit var btnRegister: Button
     var DB:DBHelper?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -38,7 +42,12 @@ class MainActivity : AppCompatActivity() {
                 // id 와 password 일치시
                 if (checkUserpass == true) {
                     Toast.makeText(this@MainActivity, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(applicationContext, HomeActivity::class.java)
+
+                    val nextIntent = Intent(this, MypageActivity::class.java)
+                    nextIntent.putExtra("id", user)
+                    startActivity(nextIntent)
+
+                    val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
                 }
                 else {

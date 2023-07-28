@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#17000000"
+        android:endColor="@android:color/transparent"
+        android:angle="90" />
+</shape>
+<!--
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape>
@@ -111,10 +118,10 @@
         </shape>
     </item>
 
-    <!-- Background -->
+
     <item>
         <shape>
             <solid android:color="@android:color/white" />
         </shape>
     </item>
-</layer-list>
+</layer-list>-->

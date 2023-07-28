@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home_bar"
+        android:enabled="true"
+        android:icon="@drawable/selector_menu_home"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/new_bar"
+        android:enabled="true"
+        android:icon="@drawable/selector_menu_new"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/recipe_bar"
+        android:enabled="true"
+        android:icon="@drawable/selector_menu_recipe"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/mypage_bar"
+        android:enabled="true"
+        android:icon="@drawable/selector_menu_mypage"
+        app:showAsAction="ifRoom"/>
+</menu>
