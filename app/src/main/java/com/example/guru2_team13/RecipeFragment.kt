@@ -1,10 +1,14 @@
 package com.example.guru2_team13
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +25,10 @@ class RecipeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    lateinit var fab_write: FloatingActionButton
+    lateinit var recipeButton1: ImageButton
+    lateinit var recipeButton3: ImageButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,7 +42,25 @@ class RecipeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recipe, container, false)
+        val view = inflater.inflate(R.layout.fragment_recipe, container, false)
+
+        fab_write = view.findViewById(com.example.guru2_team13.R.id.fab_write)
+        recipeButton1 = view.findViewById(com.example.guru2_team13.R.id.recipeButton1)
+        recipeButton3 = view.findViewById(com.example.guru2_team13.R.id.recipeButton3)
+
+        fab_write.setOnClickListener {
+            var intent = Intent(activity, BoardWrite::class.java)
+            startActivity(intent)
+        }
+        recipeButton1.setOnClickListener {
+            var intent = Intent(activity, BoardDetail::class.java)
+            startActivity(intent)
+        }
+        recipeButton3.setOnClickListener {
+            var intent = Intent(activity, BoardDetail2::class.java)
+            startActivity(intent)
+        }
+        return view
     }
 
     companion object {

@@ -1,9 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyWriteRecipeActivity">
+    android:orientation="vertical"
+    tools:context=".BoardList">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 레시피 리스트 전체 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 레시피 게시판 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="                나의 레시피"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:src="@drawable/searchbutton"
+                    android:background="#00ff0000"/>
+            </LinearLayout>
+
+            <!-- 마크정식 불닭장칼국수 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="23dp">
+
+                    <ImageButton
+                        android:id="@+id/recipeButton1"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:src="@drawable/recipe1"
+                        android:scaleType="fitXY"
+                        android:background="#00ff0000"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="145dp"
+                            android:layout_height="wrap_content"
+                            android:text="마크정식"
+                            android:textSize="15dp"/>
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"
+                            android:background="@drawable/checkbox_bookmark"
+                            android:checked="true"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+
+                    <ImageButton
+                        android:id="@+id/recipeButton2"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:src="@drawable/recipe2"
+                        android:scaleType="fitXY"
+                        android:background="#00ff0000"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="145dp"
+                            android:layout_height="wrap_content"
+                            android:text="불닭장칼국수"
+                            android:textSize="15dp"/>
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"
+                            android:background="@drawable/checkbox_bookmark"
+                            android:checked="true"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 밀키스에이드 헤이즐넛바나나 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+
+                    <ImageButton
+                        android:id="@+id/recipeButton7"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:src="@drawable/recipe7"
+                        android:scaleType="fitXY"
+                        android:background="#00ff0000"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="145dp"
+                            android:layout_height="wrap_content"
+                            android:text="밀키스에이드"
+                            android:textSize="15dp"/>
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"
+                            android:background="@drawable/checkbox_bookmark"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+
+                    <ImageButton
+                        android:id="@+id/recipeButton8"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:src="@drawable/recipe8"
+                        android:scaleType="fitXY"
+                        android:background="#00ff0000"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="145dp"
+                            android:layout_height="wrap_content"
+                            android:text="헤이즐넛바나나"
+                            android:textSize="15dp"/>
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"
+                            android:background="@drawable/checkbox_bookmark"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

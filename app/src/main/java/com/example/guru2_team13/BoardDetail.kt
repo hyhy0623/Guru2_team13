@@ -14,7 +14,7 @@ class BoardDetail : AppCompatActivity() {
         fab_menu = findViewById(R.id.fab_menu)
 
         fab_menu.setOnClickListener {
-            var intent = Intent(this, BoardList::class.java)
+            var intent = Intent(this, RecipeFragment::class.java)
             startActivity(intent)
         }
     }
