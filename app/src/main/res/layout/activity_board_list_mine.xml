@@ -7,18 +7,6 @@
     android:orientation="vertical"
     tools:context=".BoardList">
 
-    <!-- fab 버튼 -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_write"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="20dp"
-        android:clickable="true"
-        android:backgroundTint="#1C27FF"
-        app:srcCompat="@drawable/pencil"
-        app:tint="@color/white"/>
-
     <!-- 레시피 리스트 전체 -->
     <ScrollView
         android:layout_width="match_parent"
@@ -40,7 +28,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:textAlignment="center"
-                    android:text="                레시피 게시판"
+                    android:text="                나의 레시피"
                     android:textSize="20dp"
                     android:textStyle="bold"/>
 
@@ -123,155 +111,6 @@
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
                             android:checked="true"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 딸기수박에이드 불닭짜파게티 -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="20dp">
-
-                    <ImageButton
-                        android:id="@+id/recipeButton3"
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:src="@drawable/recipe3"
-                        android:scaleType="fitXY"
-                        android:background="#00ff0000"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="145dp"
-                            android:layout_height="wrap_content"
-                            android:text="딸기수박에이드"
-                            android:textSize="15dp"/>
-
-                        <CheckBox
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:button="@android:color/transparent"
-                            android:background="@drawable/checkbox_bookmark"
-                            android:checked="true"/>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="20dp">
-
-                    <ImageButton
-                        android:id="@+id/recipeButton4"
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:src="@drawable/recipe4"
-                        android:scaleType="fitXY"
-                        android:background="#00ff0000"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="145dp"
-                            android:layout_height="wrap_content"
-                            android:text="불닭짜파게티"
-                            android:textSize="15dp"/>
-
-                        <CheckBox
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:button="@android:color/transparent"
-                            android:background="@drawable/checkbox_bookmark"
-                            android:checked="true"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 소치콘볶이 돼지게티 -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="20dp">
-
-                    <ImageButton
-                        android:id="@+id/recipeButton5"
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:src="@drawable/recipe5"
-                        android:scaleType="fitXY"
-                        android:background="#00ff0000"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="145dp"
-                            android:layout_height="wrap_content"
-                            android:text="소치콘볶이"
-                            android:textSize="15dp"/>
-
-                        <CheckBox
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:button="@android:color/transparent"
-                            android:background="@drawable/checkbox_bookmark"/>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="20dp">
-
-                    <ImageButton
-                        android:id="@+id/recipeButton6"
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:src="@drawable/recipe6"
-                        android:scaleType="fitXY"
-                        android:background="#00ff0000"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="145dp"
-                            android:layout_height="wrap_content"
-                            android:text="돼지게티"
-                            android:textSize="15dp"/>
-
-                        <CheckBox
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:button="@android:color/transparent"
-                            android:background="@drawable/checkbox_bookmark"/>
-
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
