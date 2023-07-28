@@ -57,54 +57,74 @@ class Product : AppCompatActivity() {
         rGroup1.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.allBtn -> {
+                    heartCheck1.isChecked = false
+                    heartCheck2.isChecked = false
+                    heartCheck3.isChecked = false
+                    heartCheck4.isChecked = false
+                    heartCheck5.isChecked = false
                     imgProduct1.setImageResource(R.drawable.cu1)
-                    productName1.text = "#뉴불어묵삼각 #3XL"
+                    productName1.text = "#CU #뉴불어묵삼각 #3XL"
                     imgProduct2.setImageResource(R.drawable.gs1)
-                    productName2.text = "#행운약과라떼 #유어스"
+                    productName2.text = "#GS #행운약과라떼 #유어스"
                     imgProduct3.setImageResource(R.drawable.se3)
-                    productName3.text = "#멸치아몬드 #구운양파맛 #바프"
+                    productName3.text = "#세븐일레븐 #멸치아몬드 #바프"
                     imgProduct3.setImageResource(R.drawable.gs3)
-                    productName3.text = "#솔티카라멜휘낭시에 #브레디크"
+                    productName3.text = "#GS #솔티카라멜휘낭시에 #브레디크"
                     imgProduct4.setImageResource(R.drawable.cu4)
-                    productName4.text = "#더블초코맘모스빵 #고대"
+                    productName4.text = "#CU #더블초코맘모스빵 #고대"
                 }
                 R.id.CUBtn -> {
+                    heartCheck1.isChecked = false
+                    heartCheck2.isChecked = false
+                    heartCheck3.isChecked = false
+                    heartCheck4.isChecked = false
+                    heartCheck5.isChecked = false
                     imgProduct1.setImageResource(R.drawable.cu1)
-                    productName1.text = "#뉴불어묵삼각 #3XL"
+                    productName1.text = "#CU #뉴불어묵삼각 #3XL"
                     imgProduct2.setImageResource(R.drawable.cu2)
-                    productName2.text = "#포슬감자샌드 #꽃카"
+                    productName2.text = "#CU #포슬감자샌드 #꽃카"
                     imgProduct3.setImageResource(R.drawable.cu3)
-                    productName3.text = "#청양파스타 #이열치열"
+                    productName3.text = "#CU #청양파스타 #이열치열"
                     imgProduct4.setImageResource(R.drawable.cu4)
-                    productName4.text = "#더블초코맘모스빵 #고대"
+                    productName4.text = "#CU #더블초코맘모스빵 #고대"
                     imgProduct5.setImageResource(R.drawable.cu5)
-                    productName5.text = "#통통소시지모닝머핀 #KIA"
+                    productName5.text = "#CU #통통소시지모닝머핀 #KIA"
                 }
 
                 R.id.GSBtn -> {
+                    heartCheck1.isChecked = false
+                    heartCheck2.isChecked = false
+                    heartCheck3.isChecked = false
+                    heartCheck4.isChecked = false
+                    heartCheck5.isChecked = false
                     imgProduct1.setImageResource(R.drawable.gs1)
-                    productName1.text = "#행운약과라떼 #유어스"
+                    productName1.text = "#GS #행운약과라떼 #유어스"
                     imgProduct2.setImageResource(R.drawable.gs2)
-                    productName2.text = "#하이면순두부짬뽕 #삼립"
+                    productName2.text = "#GS #하이면순두부짬뽕 #삼립"
                     imgProduct3.setImageResource(R.drawable.gs3)
-                    productName3.text = "#솔티카라멜휘낭시에 #브레디크"
+                    productName3.text = "#GS #솔티카라멜휘낭시에 #브레디크"
                     imgProduct4.setImageResource(R.drawable.gs4)
-                    productName4.text = "#생크림도넛(레몬크림) #매일우유"
+                    productName4.text = "#GS #생크림도넛(레몬크림) #매일우유"
                     imgProduct5.setImageResource(R.drawable.gs5)
-                    productName5.text = "#양념치킨도시락 #페리카나"
+                    productName5.text = "#GS #양념치킨도시락 #페리카나"
                 }
 
                 R.id.SEBtn -> {
+                    heartCheck1.isChecked = false
+                    heartCheck2.isChecked = false
+                    heartCheck3.isChecked = false
+                    heartCheck4.isChecked = false
+                    heartCheck5.isChecked = false
                     imgProduct1.setImageResource(R.drawable.se1)
-                    productName1.text = "#숯불후랑크 #씨제이"
+                    productName1.text = "#세븐일레븐 #숯불후랑크 #씨제이"
                     imgProduct2.setImageResource(R.drawable.se2)
-                    productName2.text = "#더미식메밀비빔 #하림"
+                    productName2.text = "#세븐일레븐 #더미식메밀비빔 #하림"
                     imgProduct3.setImageResource(R.drawable.se3)
-                    productName3.text = "#멸치아몬드 #구운양파맛 #바프"
+                    productName3.text = "#세븐일레븐 #멸치아몬드 #바프"
                     imgProduct4.setImageResource(R.drawable.se4)
-                    productName4.text = "#포테이토칩 #잭슨페퍼로니 #농심"
+                    productName4.text = "#세븐일레븐 #포테이토칩 #농심"
                     imgProduct5.setImageResource(R.drawable.se5)
-                    productName5.text = "#와일드크래미틈새소스 #한성"
+                    productName5.text = "#세븐일레븐 #와일드크래미틈새소스 #한성"
                 }
             }
         }
