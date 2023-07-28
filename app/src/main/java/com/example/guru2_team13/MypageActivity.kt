@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MypageActivity : AppCompatActivity() {
-    lateinit var textNick : TextView
+    /*lateinit var textNick : TextView
     lateinit var btn1_Myp: ImageButton
     lateinit var btn2_Myp: ImageButton
     lateinit var btn3_Myp: ImageButton
@@ -57,5 +57,5 @@ class MypageActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
         }
-    }
+    }*/
 }

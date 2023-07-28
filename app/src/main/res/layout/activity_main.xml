@@ -11,7 +11,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="380dp"
         android:orientation="vertical"
         android:paddingLeft="90dp"
         android:paddingRight="90dp"
@@ -69,10 +69,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />-->
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="30dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,6 +82,7 @@
             android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
+            android:layout_marginBottom="17dp"
             android:layout_gravity="center"
             android:background="#00FF0000"
             app:srcCompat="@drawable/login" />
@@ -89,12 +90,12 @@
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
+            android:layout_height="40dp"
+            android:layout_gravity="center|bottom"
             android:backgroundTint="#00FF0000"
-            android:padding="0dp"
+            android:padding="5dp"
             android:text="회원가입" />
-    </LinearLayout>
+    </FrameLayout>
 
     <ImageView
         android:id="@+id/imageView"

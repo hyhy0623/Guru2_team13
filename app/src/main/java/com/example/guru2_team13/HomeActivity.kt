@@ -18,6 +18,10 @@ class HomeActivity : AppCompatActivity() {
 
         bnv_main.itemIconTintList = null
 
+        val id = intent.getStringExtra("id")
+
+        //supportFragmentManager.beginTransaction().replace(R.id.fl_container, mypageFragment).commit()
+
         // OnNavigationItemSelectedListener를 통해 탭 아이템 선택 시 이벤트를 처리
         // main_menu_bottom.xml 에서 설정했던 각 아이템들의 id를 통해 알맞은 프래그먼트로 변경하게 한다.
         bnv_main.run { setOnNavigationItemSelectedListener {
@@ -37,6 +41,11 @@ class HomeActivity : AppCompatActivity() {
                 }
                 R.id.mypage_bar -> {
                     val mypageFragment = MypageFragment()
+
+                    val bundle = Bundle()
+                    bundle.putString("id", id)
+                    mypageFragment.arguments = bundle
+
                     supportFragmentManager.beginTransaction().replace(R.id.fl_container, mypageFragment).commit()
 
                 }

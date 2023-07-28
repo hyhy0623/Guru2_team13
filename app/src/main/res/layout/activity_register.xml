@@ -241,17 +241,20 @@
         </LinearLayout>
     </LinearLayout>
 
-    <Button
+    <ImageButton
         android:id="@+id/btnRegister_Reg"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="완료"
-        android:textColor="#1C26FF"
-        android:textStyle="bold"
+        android:layout_marginBottom="45dp"
+        android:background="#00FF0000"
+        android:src="@drawable/complete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+    <!--android:backgroundTint="#FFFFFF"
+    android:text="완료"
+    android:textColor="#1C26FF"
+    android:textStyle="bold"-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

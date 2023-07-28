@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import java.util.regex.Pattern
 
@@ -15,7 +16,7 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var editTextRePassword: EditText
     lateinit var editTextNick: EditText
     lateinit var editTextPhone: EditText
-    lateinit var btnRegister: Button
+    lateinit var btnRegister: ImageButton
     lateinit var btnCheckId: Button
     var CheckId:Boolean=false
     lateinit var btnCheckNick: Button

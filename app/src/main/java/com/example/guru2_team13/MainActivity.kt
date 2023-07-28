@@ -1,14 +1,13 @@
 package com.example.guru2_team13
 
 import android.content.Intent
-import android.database.Cursor
-import android.database.sqlite.SQLiteDatabase
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentTransaction
 
 class MainActivity : AppCompatActivity() {
     lateinit var btnLogin: ImageButton
@@ -16,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var editTextPassword: EditText
     lateinit var btnRegister: Button
     var DB:DBHelper?=null
+    /*val fragmentManager = supportFragmentManager
+    lateinit var transaction: FragmentTransaction*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,10 +28,24 @@ class MainActivity : AppCompatActivity() {
         btnRegister = findViewById(R.id.btnRegister)
         DB = DBHelper(this)
 
+        /*transaction = fragmentManager.beginTransaction()
+        transaction.add(R.id.fl_container, MypageFragment())
+        transaction.commit()*/
+        /*
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)*/
+
+        val mypageFragment = MypageFragment()
+
         // 로그인 버튼 클릭
         btnLogin!!.setOnClickListener {
             val user = editTextId!!.text.toString()
             val pass = editTextPassword!!.text.toString()
+            /*
+            transaction = fragmentManager.beginTransaction()
+            val bundle = Bundle()*/
+
             // 빈칸 제출시 Toast
             if (user == "" || pass == "") Toast.makeText(
                 this@MainActivity,
@@ -43,11 +58,29 @@ class MainActivity : AppCompatActivity() {
                 if (checkUserpass == true) {
                     Toast.makeText(this@MainActivity, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
 
-                    val nextIntent = Intent(this, MypageActivity::class.java)
+                    /*val nextIntent = Intent(this, HomeActivity::class.java)
                     nextIntent.putExtra("id", user)
-                    startActivity(nextIntent)
+                    startActivity(nextIntent)*/
+                    /*val mypageFragment = MypageFragment()
+                    val bundle = Bundle()
+                    bundle.putString("id", user)
+                    mypageFragment.arguments = bundle*/
+                    /*
+                    bundle.putString("id", user)
+                    transaction.replace(R.id.fl_container, MypageFragment().apply { arguments = bundle })
+                    transaction.commit()*/
+
+                    /*
+                    val bundle = Bundle()
+                    bundle.putString("id", user)
+
+                    mypageFragment.arguments = bundle
+                    val transaction = supportFragmentManager.beginTransaction()
+                    transaction.add(R.id.fl_container, mypageFragment)
+                    transaction.commit()*/
 
                     val intent = Intent(this, HomeActivity::class.java)
+                    intent.putExtra("id", user)
                     startActivity(intent)
                 }
                 else {
