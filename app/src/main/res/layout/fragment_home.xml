@@ -35,21 +35,21 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/cu_btn"
-                android:background="transparent"/>
+                android:background="@android:color/transparent"/>
             <Button
                 android:id="@+id/GS_Btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/gs_btn"
-                android:background="transparent"/>
+                android:background="@android:color/transparent"/>
             <Button
                 android:id="@+id/SE_Btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/se_btn"
-                android:background="transparent" />
+                android:background="@android:color/transparent" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                 android:text="더보기>"
                 android:textColor="#000000"
                 android:layout_marginRight="20dp"
-                android:background="transparent"/>
+                android:background="@android:color/transparent"/>
         </LinearLayout>
 
         <LinearLayout
