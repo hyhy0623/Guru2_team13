@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Ad1Fragment">
+
+    <ImageView
+        android:id="@+id/advertiseImage1"
+        android:layout_width="415dp"
+        android:layout_height="290dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:src="@drawable/advertise1" />
+
+</LinearLayout>

@@ -1,10 +1,18 @@
 package com.example.guru2_team13
 
+import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
+import me.relex.circleindicator.CircleIndicator
+import me.relex.circleindicator.CircleIndicator3
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,12 +28,20 @@ class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    /*
+    private lateinit var viewPager2: ViewPager2
+    private lateinit var circleIndicator: CircleIndicator3*/
+    //private val adapter by lazy { ViewPagerAdapter(supportFragmentManager) }
+    private lateinit var mViewPager: ViewPager2
+    private lateinit var mIndicator: CircleIndicator3
+    private lateinit var fab: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+
         }
     }
 
@@ -33,10 +49,59 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        /*
+        val viewPagerAd = rootView.findViewById(R.id.viewPager_ad)
+        val adImages = getAdImages() // 광고에 사용할 이미지들을 가져오는 메서드
+        val adapter = AdsPagerAdapter(requireContext(), adImages)
+        viewPager2.adapter = adapter
+
+        // CircleIndicator와 ViewPager2를 연결
+        circleIndicator = rootView.findViewById(R.id.indicator)
+        circleIndicator.setViewPager(viewPager2)*/
+
+        fab = view.findViewById(R.id.fab)
+        fab.setOnClickListener {
+            val intent = Intent(getActivity(), MapActivity::class.java)
+            startActivity(intent)
+        }
+
+        return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        mViewPager = view.findViewById(R.id.viewPager_ad) // Get ViewPager2 view
+        mViewPager.adapter =
+            ViewPagerAdapter(requireActivity()) // Attach the adapter with our ViewPagerAdapter passing the host activity
+
+        mIndicator = view.findViewById(R.id.indicator)
+        mIndicator.setViewPager(mViewPager)
+
+    }
+
+
+    /*
+        val tabLayout = view.findViewById<TabLayout>(R.id.tabs)
+        TabLayoutMediator(tabLayout, mViewPager) { tab, position ->
+            tab.text = (mViewPager.adapter as ViewPagerAdapter).getFragmentName(position) // Sets tabs names as mentioned in ViewPagerAdapter fragmentNames array, this can be implemented in many different ways.
+        }.attach()*/
+
+    /*
+    // 광고에 사용할 이미지들을 가져오는 메서드 (이미지들을 Drawable 형태로 반환)
+    private fun getAdImages(): List<Drawable> {
+        // 이미지들을 Drawable로 변환하여 리스트에 추가하는 로직을 구현하세요.
+        // 예를 들면: ContextCompat.getDrawable(requireContext(), R.drawable.ad_image1)
+        val adImages = ArrayList<Drawable>()
+        // adImages.add(...)
+        // adImages.add(...)
+        // adImages.add(...)
+        return adImages
+    }*/
     companion object {
         /**
          * Use this factory method to create a new instance of
