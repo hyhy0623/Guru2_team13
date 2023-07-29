@@ -3,6 +3,9 @@ package com.example.guru2_team13
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class BoardWrite : AppCompatActivity() {
