@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RecipeFragment">
+    tools:context=".RecipeFragment"
+    android:id="@+id/fragment_recipe">
 
     <!-- TODO: Update blank fragment layout -->
     <!--
@@ -16,38 +17,42 @@
         android:orientation="vertical"
         tools:context=".BoardList">-->
 
+    <!-- 레시피 게시판 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:text="                레시피 게시판"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/btnSearch_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:src="@drawable/searchbutton"
+            android:background="#00ff0000"/>
+    </LinearLayout>
+
     <!-- 레시피 리스트 전체 -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- 레시피 게시판 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="340dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:textAlignment="center"
-                    android:text="                레시피 게시판"
-                    android:textSize="20dp"
-                    android:textStyle="bold"/>
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="20dp"
-                    android:src="@drawable/searchbutton"
-                    android:background="#00ff0000"/>
-            </LinearLayout>
 
             <!-- 마크정식 불닭장칼국수 -->
             <LinearLayout
@@ -85,7 +90,7 @@
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
-                            android:checked="true"/>
+                            android:id="@+id/recipe_mark1" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -119,7 +124,7 @@
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
-                            android:checked="true"/>
+                            android:id="@+id/recipe_mark2" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -160,7 +165,7 @@
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
-                            android:checked="true"/>
+                            android:id="@+id/recipe_mark3"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -194,7 +199,7 @@
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
-                            android:checked="true"/>
+                            android:id="@+id/recipe_mark4" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -234,7 +239,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
-                            android:background="@drawable/checkbox_bookmark"/>
+                            android:background="@drawable/checkbox_bookmark"
+                            android:id="@+id/recipe_mark5"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -267,7 +273,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
-                            android:background="@drawable/checkbox_bookmark"/>
+                            android:background="@drawable/checkbox_bookmark"
+                            android:id="@+id/recipe_mark6"/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -308,7 +315,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
-                            android:background="@drawable/checkbox_bookmark"/>
+                            android:background="@drawable/checkbox_bookmark"
+                            android:id="@+id/recipe_mark7" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -341,7 +349,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
-                            android:background="@drawable/checkbox_bookmark"/>
+                            android:background="@drawable/checkbox_bookmark"
+                            android:id="@+id/recipe_mark8"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

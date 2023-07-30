@@ -1,9 +1,12 @@
 package com.example.guru2_team13
 
 import android.content.Intent
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.CheckBox
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -38,6 +41,19 @@ class HomeActivity : AppCompatActivity() {
                 R.id.recipe_bar -> {
                     val recipeFragment = RecipeFragment()
                     supportFragmentManager.beginTransaction().replace(R.id.fl_container, recipeFragment).commit()
+                    val recipeViewModel = RecipeViewModel.getInstance()
+                    // 마이 레시피 프래그먼트 받아옴
+                    val fragment = supportFragmentManager.findFragmentById(R.id.fragment_recipe)
+
+                    // 변수에 저장
+                    val fragmentMyrecipe = fragment?.view
+
+                    // 북마크 가져옴
+                    val mark1 = fragmentMyrecipe?.findViewById<CheckBox>(R.id.recipe_mark1)
+                    if (mark1 != null) {
+                        mark1.isChecked = recipeViewModel.Mark1Checked
+                    }
+
                 }
                 R.id.mypage_bar -> {
                     val mypageFragment = MypageFragment()
@@ -61,4 +77,5 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }*/
     }
+
 }
