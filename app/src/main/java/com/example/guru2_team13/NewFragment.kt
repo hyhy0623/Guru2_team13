@@ -61,8 +61,8 @@ class NewFragment : Fragment() {
     lateinit var heartCheck15 : CheckBox
 
 
-    // 찜 버튼 데이터 리스트
-    val buttonDataList = mutableListOf<ButtonData>()
+    // 찜 버튼 데이터
+    val newViewData = NewViewModel.getInstance()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,7 +111,8 @@ class NewFragment : Fragment() {
         heartCheck15 = view.findViewById(R.id.heartCheck15)
 
 
-        // 찜 버튼 데이터 전송
+
+     /*   // 찜 버튼 데이터 전송
         if (heartCheck1.isChecked == false){
             heartCheck1.setOnCheckedChangeListener { buttonView, isChecked ->
                 //sendDataToHomeActivity(heartCheck1.isChecked)
@@ -181,11 +182,11 @@ class NewFragment : Fragment() {
             //sendDataToHomeActivity(heartCheck1.isChecked)
             buttonDataList.add(ButtonData(15, "찜15", heartCheck15.isChecked))
         }
-
+*/
 
         //sendDataToMyNewActivity(buttonDataList)
 
-        // 편의점 구분 라이도 버튼
+        // 편의점 구분 라디오 버튼
         rGroup1.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.allBtn -> {
@@ -332,19 +333,80 @@ class NewFragment : Fragment() {
             }
         }
 
+        heartCheck1?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart1Checked = view?.findViewById<CheckBox>(R.id.heartCheck1)?.isChecked ?: false
+        }
+        heartCheck2?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart2Checked = view?.findViewById<CheckBox>(R.id.heartCheck2)?.isChecked ?: false
+        }
+        heartCheck3?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart3Checked = view?.findViewById<CheckBox>(R.id.heartCheck3)?.isChecked ?: false
+        }
+        heartCheck4?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart4Checked = view?.findViewById<CheckBox>(R.id.heartCheck4)?.isChecked ?: false
+        }
+        heartCheck5?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart5Checked = view?.findViewById<CheckBox>(R.id.heartCheck5)?.isChecked ?: false
+        }
+        heartCheck6?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart6Checked = view?.findViewById<CheckBox>(R.id.heartCheck6)?.isChecked ?: false
+        }
+        heartCheck7?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart7Checked = view?.findViewById<CheckBox>(R.id.heartCheck7)?.isChecked ?: false
+        }
+        heartCheck8?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart8Checked = view?.findViewById<CheckBox>(R.id.heartCheck8)?.isChecked ?: false
+        }
+        heartCheck9?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart9Checked = view?.findViewById<CheckBox>(R.id.heartCheck9)?.isChecked ?: false
+        }
+        heartCheck10?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart10Checked = view?.findViewById<CheckBox>(R.id.heartCheck10)?.isChecked ?: false
+        }
+        heartCheck11?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart11Checked = view?.findViewById<CheckBox>(R.id.heartCheck11)?.isChecked ?: false
+        }
+        heartCheck12?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart12Checked = view?.findViewById<CheckBox>(R.id.heartCheck12)?.isChecked ?: false
+        }
+        heartCheck13?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart13Checked = view?.findViewById<CheckBox>(R.id.heartCheck13)?.isChecked ?: false
+        }
+        heartCheck14?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart14Checked = view?.findViewById<CheckBox>(R.id.heartCheck14)?.isChecked ?: false
+        }
+        heartCheck15?.setOnCheckedChangeListener { buttonView, isChecked ->
+            newViewData.Heart15Checked = view?.findViewById<CheckBox>(R.id.heartCheck15)?.isChecked ?: false
+        }
+
+        view?.findViewById<CheckBox>(R.id.heartCheck1)?.isChecked = newViewData.Heart1Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck2)?.isChecked = newViewData.Heart2Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck3)?.isChecked = newViewData.Heart3Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck4)?.isChecked = newViewData.Heart4Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck5)?.isChecked = newViewData.Heart5Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck6)?.isChecked = newViewData.Heart6Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck7)?.isChecked = newViewData.Heart7Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck8)?.isChecked = newViewData.Heart8Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck9)?.isChecked = newViewData.Heart9Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck10)?.isChecked = newViewData.Heart10Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck11)?.isChecked = newViewData.Heart11Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck12)?.isChecked = newViewData.Heart12Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck13)?.isChecked = newViewData.Heart13Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck14)?.isChecked = newViewData.Heart14Checked
+        view?.findViewById<CheckBox>(R.id.heartCheck15)?.isChecked = newViewData.Heart15Checked
         return view
     }
 
-    private fun sendDataToMyNewActivity(buttonDataList: List<ButtonData>) {
+    /*private fun sendDataToMyNewActivity(buttonDataList: List<ButtonData>) {
         val intent = Intent(requireActivity(), MyNewProductActivity::class.java)
         intent.putExtra("button_data_list", ArrayList(buttonDataList))
         requireActivity().intent = intent
-    }
+    }*/
 
     override fun onPause() {
         super.onPause()
 
-        sendDataToMyNewActivity(buttonDataList)
+        //sendDataToMyNewActivity(buttonDataList)
     }
 
     companion object {

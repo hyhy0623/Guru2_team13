@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.ScrollView
 import android.widget.TextView
 
 class MyNewProductActivity : AppCompatActivity() {
@@ -41,10 +42,14 @@ class MyNewProductActivity : AppCompatActivity() {
     lateinit var box13: LinearLayout
     lateinit var box14: LinearLayout
     lateinit var box15: LinearLayout
+    private var on: Boolean = false
+
+    val newViewData = NewViewModel.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_new_product)
+
 
         rGroup1 = findViewById(R.id.rGroup1)
         rdoAll = findViewById(R.id.allBtn)
@@ -77,7 +82,209 @@ class MyNewProductActivity : AppCompatActivity() {
         box14 = findViewById(R.id.box_new14)
         box15 = findViewById(R.id.box_new15)
 
+        if (on == false) {
+            // box 뷰들을 모두 안 보이게 설정
+            val allBoxes = listOf(box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15)
+            for (box in allBoxes) {
+                box.visibility = View.GONE
+            }
+            on = true
+        }
+        if (newViewData.Heart1Checked == true) {
+            box1.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart1Checked == true) {
+            box1.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart2Checked == true) {
+            box2.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart3Checked == true) {
+            box3.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart4Checked == true) {
+            box4.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart5Checked == true) {
+            box5.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart6Checked == true) {
+            box6.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart7Checked == true) {
+            box7.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart8Checked == true) {
+            box8.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart9Checked == true) {
+            box9.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart10Checked == true) {
+            box10.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart11Checked == true) {
+            box11.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart12Checked == true) {
+            box12.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart13Checked == true) {
+            box13.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart14Checked == true) {
+            box14.visibility = View.VISIBLE
+        }
+        if (newViewData.Heart15Checked == true) {
+            box15.visibility = View.VISIBLE
+        }
 
+        rGroup1.setOnCheckedChangeListener { radioGroup, i ->
+            when (i) {
+                R.id.allBtn -> {
+                    // 스크롤 맨 위로 이동
+                    findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                    if (newViewData.Heart1Checked == true) {
+                        box1.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart2Checked == true) {
+                        box2.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart3Checked == true) {
+                        box3.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart4Checked == true) {
+                        box4.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart5Checked == true) {
+                        box5.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart6Checked == true) {
+                        box6.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart7Checked == true) {
+                        box7.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart8Checked == true) {
+                        box8.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart9Checked == true) {
+                        box9.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart10Checked == true) {
+                        box10.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart11Checked == true) {
+                        box11.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart12Checked == true) {
+                        box12.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart13Checked == true) {
+                        box13.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart14Checked == true) {
+                        box14.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart15Checked == true) {
+                        box15.visibility = View.VISIBLE
+                    }
+                }
+
+                R.id.CUBtn -> {
+                    findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                    if (newViewData.Heart1Checked == true) {
+                        box1.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart4Checked == true) {
+                        box4.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart7Checked == true) {
+                        box7.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart10Checked == true) {
+                        box10.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart13Checked == true) {
+                        box13.visibility = View.VISIBLE
+                    }
+                    box2.visibility = View.GONE
+                    box3.visibility = View.GONE
+                    box5.visibility = View.GONE
+                    box6.visibility = View.GONE
+                    box8.visibility = View.GONE
+                    box9.visibility = View.GONE
+                    box11.visibility = View.GONE
+                    box12.visibility = View.GONE
+                    box14.visibility = View.GONE
+                    box15.visibility = View.GONE
+                }
+
+                R.id.GSBtn -> {
+                    findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                    if (newViewData.Heart2Checked == true) {
+                        box2.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart5Checked == true) {
+                        box5.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart8Checked == true) {
+                        box8.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart11Checked == true) {
+                        box11.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart14Checked == true) {
+                        box14.visibility = View.VISIBLE
+                    }
+                    box1.visibility = View.GONE
+                    box3.visibility = View.GONE
+                    box4.visibility = View.GONE
+                    box6.visibility = View.GONE
+                    box7.visibility = View.GONE
+                    box9.visibility = View.GONE
+                    box10.visibility = View.GONE
+                    box12.visibility = View.GONE
+                    box13.visibility = View.GONE
+                    box15.visibility = View.GONE
+                }
+
+                R.id.SEBtn -> {
+                    findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                    if (newViewData.Heart3Checked == true) {
+                        box3.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart6Checked == true) {
+                        box6.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart9Checked == true) {
+                        box9.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart12Checked == true) {
+                        box12.visibility = View.VISIBLE
+                    }
+                    if (newViewData.Heart15Checked == true) {
+                        box15.visibility = View.VISIBLE
+                    }
+                    box1.visibility = View.GONE
+                    box2.visibility = View.GONE
+                    box4.visibility = View.GONE
+                    box5.visibility = View.GONE
+                    box7.visibility = View.GONE
+                    box8.visibility = View.GONE
+                    box10.visibility = View.GONE
+                    box11.visibility = View.GONE
+                    box13.visibility = View.GONE
+                    box14.visibility = View.GONE
+                }
+            }
+        }
+
+    /*
         // 찜 버튼 데이터 받아오기
         val buttonDataList = intent.getParcelableArrayListExtra<ButtonData>("button_data_list")
 
@@ -168,9 +375,9 @@ class MyNewProductActivity : AppCompatActivity() {
             box13.visibility = View.GONE
             box14.visibility = View.GONE
             box15.visibility = View.GONE
-        }
+        }*/
 
-        rGroup1.setOnCheckedChangeListener { radioGroup, i ->
+        /*rGroup1.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.allBtn -> {
                     imgProduct1.setImageResource(R.drawable.cu4)
@@ -194,7 +401,7 @@ class MyNewProductActivity : AppCompatActivity() {
 
                 R.id.SEBtn -> {
                 }
-            }
-        }
+            }*/
+
     }
 }
