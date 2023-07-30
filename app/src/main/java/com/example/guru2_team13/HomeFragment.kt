@@ -92,20 +92,47 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
         recipe_Btn.setOnClickListener {
-            var intent = Intent(activity, BoardList::class.java)
-            startActivity(intent)
+            val recipeFragment = RecipeFragment()
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.fl_container, recipeFragment)
+            transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
+            transaction.commit()
+
+//            val recipeFragment = RecipeFragment()
+//            parentFragmentManager.beginTransaction().replace(R.id.fl_container, recipeFragment).commit()
+
+//            var intent = Intent(activity, BoardList::class.java)
+//            startActivity(intent)
         }
         CU_Btn.setOnClickListener {
-            var intent = Intent(activity, NewCU::class.java)
-            startActivity(intent)
+            val newFragment = NewFragment()
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.fl_container, newFragment)
+            transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
+            transaction.commit()
+
+//            var intent = Intent(activity, NewCU::class.java)
+//            startActivity(intent)
         }
         GS_Btn.setOnClickListener {
-            var intent = Intent(activity, NewGS::class.java)
-            startActivity(intent)
+            val newFragment = NewFragment()
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.fl_container, newFragment)
+            transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
+            transaction.commit()
+
+//            var intent = Intent(activity, NewGS::class.java)
+//            startActivity(intent)
         }
         SE_Btn.setOnClickListener {
-            var intent = Intent(activity, NewSeven::class.java)
-            startActivity(intent)
+            val newFragment = NewFragment()
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.fl_container, newFragment)
+            transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
+            transaction.commit()
+
+//            var intent = Intent(activity, NewSeven::class.java)
+//            startActivity(intent)
         }
         return view
     }
