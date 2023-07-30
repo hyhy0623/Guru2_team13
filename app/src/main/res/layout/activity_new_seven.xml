@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewSeven">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="이 달의 세븐일레븐 신제품"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/box_new3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage3"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/se1" />
+
+                    <TextView
+                        android:id="@+id/productName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#세븐일레븐 #숯불후랑크 #씨제이"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_new6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/product6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage6"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/se2" />
+
+                    <TextView
+                        android:id="@+id/productName6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#세븐일레븐 #더미식메밀비빔 #하림"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_new9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage9"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/se3" />
+
+                    <TextView
+                        android:id="@+id/productName9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#세븐일레븐 #멸치아몬드 #바프"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_new12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage12"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/se4" />
+
+                    <TextView
+                        android:id="@+id/productName12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#세븐일레븐 #포테이토칩 #농심"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_new15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage15"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/se5" />
+
+                    <TextView
+                        android:id="@+id/productName15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#세븐일레븐 #와일드크래미틈새소스 #한성"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

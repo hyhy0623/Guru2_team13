@@ -9,16 +9,9 @@ import android.view.ViewGroup
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class BoardWrite : AppCompatActivity() {
-    lateinit var fab_menu: FloatingActionButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_board_write)
-
-        fab_menu = findViewById(R.id.fab_menu)
-
-        fab_menu.setOnClickListener {
-            var intent = Intent(this, RecipeFragment::class.java)
-            startActivity(intent)
-        }
     }
 }

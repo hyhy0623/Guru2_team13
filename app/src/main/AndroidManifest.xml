@@ -25,6 +25,15 @@
             android:name=".ImageAdaper"
             android:exported="false" />
         <activity
+            android:name=".NewSeven"
+            android:exported="false" />
+        <activity
+            android:name=".NewGS"
+            android:exported="false" />
+        <activity
+            android:name=".NewCU"
+            android:exported="false" />
+        <activity
             android:name=".ButtonData"
             android:exported="false" />
         <activity
