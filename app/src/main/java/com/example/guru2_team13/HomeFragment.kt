@@ -126,7 +126,7 @@ class HomeFragment : Fragment() {
         // 이전에 실행되었던 autoSlideRunnable을 제거합니다.
         autoSlideHandler.removeCallbacks(autoSlideRunnable)
         // 3초마다 자동 슬라이드하도록 핸들러를 설정합니다.
-        autoSlideHandler.postDelayed(autoSlideRunnable, 3000)
+        autoSlideHandler.postDelayed(autoSlideRunnable, 2800)
     }
 
     private fun stopAutoSlide() {

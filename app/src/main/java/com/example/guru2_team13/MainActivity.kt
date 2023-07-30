@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 else {
-                    Toast.makeText(this@MainActivity, "회원정보가 존재하지 않습니다.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "아이디와 비밀번호를 확인해 주세요.", Toast.LENGTH_SHORT).show()
                 }
             }
         }
