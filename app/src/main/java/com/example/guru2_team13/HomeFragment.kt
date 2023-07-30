@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
+import android.widget.Button
 import androidx.core.content.ContextCompat.startActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
@@ -38,6 +39,10 @@ class HomeFragment : Fragment() {
     private lateinit var mViewPager: ViewPager2
     private lateinit var mIndicator: CircleIndicator3
     private lateinit var fab: View
+    lateinit var recipe_Btn: Button
+    lateinit var CU_Btn: Button
+    lateinit var GS_Btn: Button
+    lateinit var SE_Btn: Button
 
     private val autoSlideHandler = Handler()
     private val autoSlideRunnable = object : Runnable {
@@ -48,8 +53,6 @@ class HomeFragment : Fragment() {
             mViewPager.setCurrentItem(nextItem, true)
             startAutoSlide() // 3초 타이머를 다시 시작합니다.
         }
-
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,7 +60,6 @@ class HomeFragment : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
-
         }
     }
 
@@ -80,11 +82,31 @@ class HomeFragment : Fragment() {
         circleIndicator.setViewPager(viewPager2)*/
 
         fab = view.findViewById(R.id.fab)
+        recipe_Btn = view.findViewById(R.id.recipe_Btn)
+        CU_Btn = view.findViewById(R.id.CU_Btn)
+        GS_Btn = view.findViewById(R.id.GS_Btn)
+        SE_Btn = view.findViewById(R.id.SE_Btn)
+
         fab.setOnClickListener {
             val intent = Intent(getActivity(), MapActivity::class.java)
             startActivity(intent)
         }
-
+        recipe_Btn.setOnClickListener {
+            var intent = Intent(activity, BoardList::class.java)
+            startActivity(intent)
+        }
+        CU_Btn.setOnClickListener {
+            var intent = Intent(activity, NewCU::class.java)
+            startActivity(intent)
+        }
+        GS_Btn.setOnClickListener {
+            var intent = Intent(activity, NewGS::class.java)
+            startActivity(intent)
+        }
+        SE_Btn.setOnClickListener {
+            var intent = Intent(activity, NewSeven::class.java)
+            startActivity(intent)
+        }
         return view
     }
 

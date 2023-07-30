@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewCU">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="이 달의 CU 신제품"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/box_new1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cu1" />
+
+                    <TextView
+                        android:id="@+id/productName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#CU #뉴불어묵삼각 #3XL"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_new4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage4"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cu2" />
+
+                    <TextView
+                        android:id="@+id/productName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#CU #포슬감자샌드 #꽃카"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_new7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage7"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cu3" />
+
+                    <TextView
+                        android:id="@+id/productName7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#CU #청양파스타 #이열치열"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_new10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage10"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cu4" />
+
+                    <TextView
+                        android:id="@+id/productName10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#CU #더블초코맘모스빵 #고대"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_new13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage13"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cu5" />
+
+                    <TextView
+                        android:id="@+id/productName13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#CU #통통소시지모닝머핀 #KIA"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
