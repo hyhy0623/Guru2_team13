@@ -65,15 +65,18 @@
     </LinearLayout>
 
     <ScrollView
+        android:id="@+id/scrollView_new"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/box_new1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
@@ -92,7 +95,7 @@
                         android:layout_height="350dp"
                         android:padding="20dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/cu4" />
+                        android:src="@drawable/cu1" />
 
                     <TextView
                         android:id="@+id/productName1"
@@ -100,29 +103,30 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|left"
                         android:layout_margin="30dp"
-                        android:text="#CU #더블초코맘모스빵 #고대"
+                        android:text="#CU #뉴불어묵삼각 #3XL"
                         android:textSize="18sp" />
 
                     <CheckBox
                         android:id="@+id/heartCheck1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8"
                         android:layout_gravity="top|right"
                         android:layout_margin="30dp"
-                        android:button="@android:color/transparent"
                         android:background="@drawable/checkbox_heart"
-                        android:checked="true"/>
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
                 </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/box_new2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="5dp">
+
                 <FrameLayout
                     android:id="@+id/product2"
                     android:layout_width="match_parent"
@@ -144,57 +148,580 @@
                         android:layout_gravity="bottom|left"
                         android:layout_margin="30dp"
                         android:text="#GS 행운약과라떼 #유어스"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
+
                     <CheckBox
                         android:id="@+id/heartCheck2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|right"
                         android:layout_margin="30dp"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8"
-                        android:button="@android:color/transparent"
                         android:background="@drawable/checkbox_heart"
-                        android:checked="true"/>
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
                 </FrameLayout>
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/box_new3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="5dp">
+
                 <FrameLayout
                     android:id="@+id/product3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/image_background">
+
                     <ImageView
                         android:id="@+id/productImage3"
                         android:layout_width="match_parent"
                         android:layout_height="350dp"
                         android:padding="20dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/gs3" />
+                        android:src="@drawable/se1" />
+
                     <TextView
                         android:id="@+id/productName3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|left"
                         android:layout_margin="30dp"
-                        android:text="#GS #솔티카라멜휘낭시에 #브레디크"
-                        android:textSize="18sp"/>
+                        android:text="#세븐일레븐 #숯불후랑크 #씨제이"
+                        android:textSize="18sp" />
+
                     <CheckBox
                         android:id="@+id/heartCheck3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|right"
                         android:layout_margin="30dp"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8"
-                        android:button="@android:color/transparent"
                         android:background="@drawable/checkbox_heart"
-                        android:checked="true"/>
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage4"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cu2" />
+
+                    <TextView
+                        android:id="@+id/productName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#CU #포슬감자샌드 #꽃카"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_new5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage5"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/gs2" />
+
+                    <TextView
+                        android:id="@+id/productName5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#GS #하이면순두부짬뽕 #삼립"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/product6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage6"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/se2" />
+
+                    <TextView
+                        android:id="@+id/productName6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#세븐일레븐 #더미식메밀비빔 #하림"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage7"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cu3" />
+
+                    <TextView
+                        android:id="@+id/productName7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#CU #청양파스타 #이열치열"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage8"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/gs3" />
+
+                    <TextView
+                        android:id="@+id/productName8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#GS #솔티카라멜휘낭시에 #브레디크"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage9"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/se3" />
+
+                    <TextView
+                        android:id="@+id/productName9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#세븐일레븐 #멸치아몬드 #바프"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage10"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cu4" />
+
+                    <TextView
+                        android:id="@+id/productName10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#CU #더블초코맘모스빵 #고대"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage11"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/gs4" />
+
+                    <TextView
+                        android:id="@+id/productName11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#GS #생크림도넛(레몬크림) #매일우유"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage12"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/se4" />
+
+                    <TextView
+                        android:id="@+id/productName12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#세븐일레븐 #포테이토칩 #농심"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage13"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cu5" />
+
+                    <TextView
+                        android:id="@+id/productName13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#CU #통통소시지모닝머핀 #KIA"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage14"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/gs5" />
+
+                    <TextView
+                        android:id="@+id/productName14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#GS #양념치킨도시락 #페리카나"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/box_new15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/product15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_background">
+
+                    <ImageView
+                        android:id="@+id/productImage15"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/se5" />
+
+                    <TextView
+                        android:id="@+id/productName15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="30dp"
+                        android:text="#세븐일레븐 #와일드크래미틈새소스 #한성"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/heartCheck15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="30dp"
+                        android:background="@drawable/checkbox_heart"
+                        android:button="@android:color/transparent"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>

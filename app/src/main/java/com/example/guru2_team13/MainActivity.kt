@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             // 빈칸 제출시 Toast
             if (user == "" || pass == "") Toast.makeText(
                 this@MainActivity,
-                "회원정보를 모두 입력해주세요.",
+                "아이디와 비밀번호를 모두 입력해주세요.",
                 Toast.LENGTH_SHORT
             ).show()
             else {

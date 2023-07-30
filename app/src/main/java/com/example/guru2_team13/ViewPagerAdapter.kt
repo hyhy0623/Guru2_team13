@@ -1,5 +1,7 @@
 package com.example.guru2_team13
 
+import android.os.Looper
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -37,3 +39,5 @@ class ViewPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
         return mFragmentNames[position]
     }
 }
+
+

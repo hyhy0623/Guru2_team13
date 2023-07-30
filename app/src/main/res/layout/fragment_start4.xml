@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Start4Fragment">
 
-    <ImageView
-        android:id="@+id/advertiseImage1"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        android:src="@drawable/advertise1" />
-    <ImageButton
-        android:id="@+id/btnStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/start_button"
-        android:background="#00FF0000"
-        android:text="Button" />
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/start4_back"
+            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/start4_text1" />
 
-</FrameLayout>
+            <ImageView
+                android:id="@+id/advertiseImage1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/start4" />
+            <ImageButton
+                android:id="@+id/btnStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/start_button"
+                android:background="#00FF0000"
+                android:text="Button" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

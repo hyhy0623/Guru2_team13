@@ -2,8 +2,10 @@ package com.example.guru2_team13
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.CheckBox
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
@@ -23,6 +25,23 @@ class MyNewProductActivity : AppCompatActivity() {
     lateinit var imgProduct3 : ImageView
     lateinit var productName3 : TextView
     lateinit var heartCheck3 : CheckBox
+
+    lateinit var box1: LinearLayout
+    lateinit var box2: LinearLayout
+    lateinit var box3: LinearLayout
+    lateinit var box4: LinearLayout
+    lateinit var box5: LinearLayout
+    lateinit var box6: LinearLayout
+    lateinit var box7: LinearLayout
+    lateinit var box8: LinearLayout
+    lateinit var box9: LinearLayout
+    lateinit var box10: LinearLayout
+    lateinit var box11: LinearLayout
+    lateinit var box12: LinearLayout
+    lateinit var box13: LinearLayout
+    lateinit var box14: LinearLayout
+    lateinit var box15: LinearLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_new_product)
@@ -41,6 +60,115 @@ class MyNewProductActivity : AppCompatActivity() {
         imgProduct3 = findViewById(R.id.productImage3)
         productName3 = findViewById(R.id.productName3)
         heartCheck3 = findViewById(R.id.heartCheck3)
+
+        box1 = findViewById(R.id.box_new1)
+        box2 = findViewById(R.id.box_new2)
+        box3 = findViewById(R.id.box_new3)
+        box4 = findViewById(R.id.box_new4)
+        box5 = findViewById(R.id.box_new5)
+        box6 = findViewById(R.id.box_new6)
+        box7 = findViewById(R.id.box_new7)
+        box8 = findViewById(R.id.box_new8)
+        box9 = findViewById(R.id.box_new9)
+        box10 = findViewById(R.id.box_new10)
+        box11 = findViewById(R.id.box_new11)
+        box12 = findViewById(R.id.box_new12)
+        box13 = findViewById(R.id.box_new13)
+        box14 = findViewById(R.id.box_new14)
+        box15 = findViewById(R.id.box_new15)
+
+
+        // 찜 버튼 데이터 받아오기
+        val buttonDataList = intent.getParcelableArrayListExtra<ButtonData>("button_data_list")
+
+
+        if (buttonDataList != null) {
+            box1.visibility = View.GONE
+            box2.visibility = View.GONE
+            box3.visibility = View.GONE
+            box4.visibility = View.GONE
+            box5.visibility = View.GONE
+            box6.visibility = View.GONE
+            box7.visibility = View.GONE
+            box8.visibility = View.GONE
+            box9.visibility = View.GONE
+            box10.visibility = View.GONE
+            box11.visibility = View.GONE
+            box12.visibility = View.GONE
+            box13.visibility = View.GONE
+            box14.visibility = View.GONE
+            box15.visibility = View.GONE
+            for (buttonData in buttonDataList) {
+                if (buttonData.isChecked) {
+                    val buttonID = buttonData.buttonId
+                     when  (buttonID) {
+                         1 -> {
+                            box1.visibility = View.VISIBLE
+                         }
+                         2 -> {
+                             box2.visibility = View.VISIBLE
+                         }
+                         3 -> {
+                             box3.visibility = View.VISIBLE
+                         }
+                         4 -> {
+                             box4.visibility = View.VISIBLE
+                         }
+                         5 -> {
+                             box5.visibility = View.VISIBLE
+                         }
+                         6 -> {
+                             box6.visibility = View.VISIBLE
+                         }
+                         7 -> {
+                             box7.visibility = View.VISIBLE
+                         }
+                         8 -> {
+                             box8.visibility = View.VISIBLE
+                         }
+                         9 -> {
+                             box9.visibility = View.VISIBLE
+                         }
+                         10 -> {
+                             box10.visibility = View.VISIBLE
+                         }
+                         11 -> {
+                             box11.visibility = View.VISIBLE
+                         }
+                         12 -> {
+                             box12.visibility = View.VISIBLE
+                         }
+                         13 -> {
+                             box13.visibility = View.VISIBLE
+                         }
+                         14 -> {
+                             box14.visibility = View.VISIBLE
+                         }
+                         15 -> {
+                             box15.visibility = View.VISIBLE
+                         }
+                     }
+
+                }
+            }
+        }
+        else {
+            box1.visibility = View.GONE
+            box2.visibility = View.GONE
+            box3.visibility = View.GONE
+            box4.visibility = View.GONE
+            box5.visibility = View.GONE
+            box6.visibility = View.GONE
+            box7.visibility = View.GONE
+            box8.visibility = View.GONE
+            box9.visibility = View.GONE
+            box10.visibility = View.GONE
+            box11.visibility = View.GONE
+            box12.visibility = View.GONE
+            box13.visibility = View.GONE
+            box14.visibility = View.GONE
+            box15.visibility = View.GONE
+        }
 
         rGroup1.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {

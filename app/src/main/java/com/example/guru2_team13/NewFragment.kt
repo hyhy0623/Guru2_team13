@@ -1,5 +1,6 @@
 package com.example.guru2_team13
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,9 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.ScrollView
 import android.widget.TextView
+import androidx.compose.material.ButtonColors
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,6 +50,21 @@ class NewFragment : Fragment() {
     lateinit var imgProduct5 : ImageView
     lateinit var productName5 : TextView
     lateinit var heartCheck5 : CheckBox
+    lateinit var heartCheck6 : CheckBox
+    lateinit var heartCheck7 : CheckBox
+    lateinit var heartCheck8 : CheckBox
+    lateinit var heartCheck9 : CheckBox
+    lateinit var heartCheck10 : CheckBox
+    lateinit var heartCheck11 : CheckBox
+    lateinit var heartCheck12 : CheckBox
+    lateinit var heartCheck13 : CheckBox
+    lateinit var heartCheck14 : CheckBox
+    lateinit var heartCheck15 : CheckBox
+
+
+    // 찜 버튼 데이터 리스트
+    val buttonDataList = mutableListOf<ButtonData>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,15 +100,116 @@ class NewFragment : Fragment() {
         imgProduct5 = view.findViewById(R.id.productImage5)
         productName5 = view.findViewById(R.id.productName5)
         heartCheck5 = view.findViewById(R.id.heartCheck5)
+        heartCheck6 = view.findViewById(R.id.heartCheck6)
+        heartCheck7 = view.findViewById(R.id.heartCheck7)
+        heartCheck8 = view.findViewById(R.id.heartCheck8)
+        heartCheck9 = view.findViewById(R.id.heartCheck9)
+        heartCheck10 = view.findViewById(R.id.heartCheck10)
+        heartCheck11 = view.findViewById(R.id.heartCheck11)
+        heartCheck12 = view.findViewById(R.id.heartCheck12)
+        heartCheck13 = view.findViewById(R.id.heartCheck13)
+        heartCheck14 = view.findViewById(R.id.heartCheck14)
+        heartCheck15 = view.findViewById(R.id.heartCheck15)
 
+
+        // 찜 버튼 데이터 전송
+        if (heartCheck1.isChecked == false){
+            heartCheck1.setOnCheckedChangeListener { buttonView, isChecked ->
+                //sendDataToHomeActivity(heartCheck1.isChecked)
+                buttonDataList.add(ButtonData(1, "찜1", heartCheck1.isChecked))
+            }
+        }
+
+        if (heartCheck2.isChecked == false){
+            heartCheck2.setOnCheckedChangeListener { buttonView, isChecked ->
+                //sendDataToHomeActivity(heartCheck1.isChecked)
+                buttonDataList.add(ButtonData(2, "찜2", heartCheck2.isChecked))
+            }
+        }
+
+        if (heartCheck3.isChecked == false){
+            heartCheck3.setOnCheckedChangeListener { buttonView, isChecked ->
+                //sendDataToHomeActivity(heartCheck1.isChecked)
+                buttonDataList.add(ButtonData(3, "찜3", heartCheck3.isChecked))
+            }
+        }
+
+        heartCheck4.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(4, "찜4", heartCheck4.isChecked))
+        }
+        heartCheck5.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(5, "찜5", heartCheck5.isChecked))
+        }
+        heartCheck6.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(6, "찜6", heartCheck6.isChecked))
+        }
+        heartCheck7.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(7, "찜7", heartCheck7.isChecked))
+        }
+        heartCheck8.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(8, "찜8", heartCheck8.isChecked))
+        }
+        heartCheck9.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(9, "찜9", heartCheck9.isChecked))
+        }
+        heartCheck10.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(10, "찜10", heartCheck10.isChecked))
+        }
+        heartCheck11.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(11, "찜11", heartCheck11.isChecked))
+        }
+        heartCheck12.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(12, "찜12", heartCheck12.isChecked))
+        }
+        heartCheck13.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(13, "찜13", heartCheck13.isChecked))
+        }
+        heartCheck14.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(14, "찜14", heartCheck14.isChecked))
+        }
+        heartCheck15.setOnCheckedChangeListener { buttonView, isChecked ->
+            //sendDataToHomeActivity(heartCheck1.isChecked)
+            buttonDataList.add(ButtonData(15, "찜15", heartCheck15.isChecked))
+        }
+
+
+        //sendDataToMyNewActivity(buttonDataList)
+
+        // 편의점 구분 라이도 버튼
         rGroup1.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.allBtn -> {
-                    heartCheck1.isChecked = false
-                    heartCheck2.isChecked = false
-                    heartCheck3.isChecked = false
-                    heartCheck4.isChecked = false
-                    heartCheck5.isChecked = false
+                    // 스크롤 맨 위로 이동
+                    view.findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                    // 모든 편의점 신제품 보이기
+                    view.findViewById<LinearLayout>(R.id.box_new1).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new2).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new3).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new4).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new5).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new6).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new7).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new8).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new9).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new10).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new11).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new12).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new13).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new14).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new15).visibility = View.VISIBLE
+                    /*
                     imgProduct1.setImageResource(R.drawable.cu1)
                     productName1.text = "#CU #뉴불어묵삼각 #3XL"
                     imgProduct2.setImageResource(R.drawable.gs1)
@@ -99,10 +219,30 @@ class NewFragment : Fragment() {
                     imgProduct4.setImageResource(R.drawable.gs3)
                     productName4.text = "#GS #솔티카라멜휘낭시에 #브레디크"
                     imgProduct5.setImageResource(R.drawable.cu4)
-                    productName5.text = "#CU #더블초코맘모스빵 #고대"
+                    productName5.text = "#CU #더블초코맘모스빵 #고대"*/
                 }
                 R.id.CUBtn -> {
-                    heartCheck1.isChecked = false
+                    view.findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                    //cu 제외 나머지 편의점 신제품 숨김
+                    view.findViewById<LinearLayout>(R.id.box_new2).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new3).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new5).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new6).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new8).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new9).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new11).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new12).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new14).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new15).visibility = View.GONE
+
+                    // cu 신제품만 보이기
+                    view.findViewById<LinearLayout>(R.id.box_new1).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new4).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new7).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new10).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new13).visibility = View.VISIBLE
+                    /*heartCheck1.isChecked = false
                     heartCheck2.isChecked = false
                     heartCheck3.isChecked = false
                     heartCheck4.isChecked = false
@@ -116,11 +256,29 @@ class NewFragment : Fragment() {
                     imgProduct4.setImageResource(R.drawable.cu4)
                     productName4.text = "#CU #더블초코맘모스빵 #고대"
                     imgProduct5.setImageResource(R.drawable.cu5)
-                    productName5.text = "#CU #통통소시지모닝머핀 #KIA"
+                    productName5.text = "#CU #통통소시지모닝머핀 #KIA"*/
                 }
 
                 R.id.GSBtn -> {
-                    heartCheck1.isChecked = false
+                    view.findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                    view.findViewById<LinearLayout>(R.id.box_new1).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new3).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new4).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new6).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new7).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new9).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new10).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new12).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new13).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new15).visibility = View.GONE
+
+                    view.findViewById<LinearLayout>(R.id.box_new2).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new5).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new8).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new11).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new14).visibility = View.VISIBLE
+                    /*heartCheck1.isChecked = false
                     heartCheck2.isChecked = false
                     heartCheck3.isChecked = false
                     heartCheck4.isChecked = false
@@ -134,11 +292,29 @@ class NewFragment : Fragment() {
                     imgProduct4.setImageResource(R.drawable.gs4)
                     productName4.text = "#GS #생크림도넛(레몬크림) #매일우유"
                     imgProduct5.setImageResource(R.drawable.gs5)
-                    productName5.text = "#GS #양념치킨도시락 #페리카나"
+                    productName5.text = "#GS #양념치킨도시락 #페리카나"*/
                 }
 
                 R.id.SEBtn -> {
-                    heartCheck1.isChecked = false
+                    view.findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                    view.findViewById<LinearLayout>(R.id.box_new1).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new2).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new4).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new5).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new7).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new8).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new10).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new11).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new13).visibility = View.GONE
+                    view.findViewById<LinearLayout>(R.id.box_new14).visibility = View.GONE
+
+                    view.findViewById<LinearLayout>(R.id.box_new3).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new6).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new9).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new12).visibility = View.VISIBLE
+                    view.findViewById<LinearLayout>(R.id.box_new15).visibility = View.VISIBLE
+                    /*heartCheck1.isChecked = false
                     heartCheck2.isChecked = false
                     heartCheck3.isChecked = false
                     heartCheck4.isChecked = false
@@ -152,12 +328,24 @@ class NewFragment : Fragment() {
                     imgProduct4.setImageResource(R.drawable.se4)
                     productName4.text = "#세븐일레븐 #포테이토칩 #농심"
                     imgProduct5.setImageResource(R.drawable.se5)
-                    productName5.text = "#세븐일레븐 #와일드크래미틈새소스 #한성"
+                    productName5.text = "#세븐일레븐 #와일드크래미틈새소스 #한성"*/
                 }
             }
         }
 
         return view
+    }
+
+    private fun sendDataToMyNewActivity(buttonDataList: List<ButtonData>) {
+        val intent = Intent(requireActivity(), MyNewProductActivity::class.java)
+        intent.putExtra("button_data_list", ArrayList(buttonDataList))
+        requireActivity().startActivity(intent)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        sendDataToMyNewActivity(buttonDataList)
     }
 
     companion object {

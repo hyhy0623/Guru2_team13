@@ -3,11 +3,15 @@ package com.example.guru2_team13
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
+import androidx.core.content.ContextCompat.startActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -35,6 +39,19 @@ class HomeFragment : Fragment() {
     private lateinit var mViewPager: ViewPager2
     private lateinit var mIndicator: CircleIndicator3
     private lateinit var fab: View
+
+    private val autoSlideHandler = Handler()
+    private val autoSlideRunnable = object : Runnable {
+
+        override fun run() {
+            val currentItem = mViewPager.currentItem
+            val nextItem = if (currentItem == mViewPager.adapter?.itemCount?.minus(1)) 0 else currentItem + 1
+            mViewPager.setCurrentItem(nextItem, true)
+            startAutoSlide() // 3초 타이머를 다시 시작합니다.
+        }
+
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,13 +93,36 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         mViewPager = view.findViewById(R.id.viewPager_ad) // Get ViewPager2 view
-        mViewPager.adapter =
-            ViewPagerAdapter(requireActivity()) // Attach the adapter with our ViewPagerAdapter passing the host activity
+        mViewPager.adapter = ViewPagerAdapter(requireActivity()) // Attach the adapter with our ViewPagerAdapter passing the host activity
 
         mIndicator = view.findViewById(R.id.indicator)
         mIndicator.setViewPager(mViewPager)
 
+        startAutoSlide() // 자동 슬라이드 시작
     }
+
+    private fun startAutoSlide() {
+        // 이전에 실행되었던 autoSlideRunnable을 제거합니다.
+        autoSlideHandler.removeCallbacks(autoSlideRunnable)
+        // 3초마다 자동 슬라이드하도록 핸들러를 설정합니다.
+        autoSlideHandler.postDelayed(autoSlideRunnable, 3000)
+    }
+
+    private fun stopAutoSlide() {
+        // 자동 슬라이드를 중지합니다.
+        autoSlideHandler.removeCallbacks(autoSlideRunnable)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        stopAutoSlide() // Fragment가 일시정지되면 자동 슬라이드를 중지합니다.
+    }
+
+    override fun onResume() {
+        super.onResume()
+        startAutoSlide() // Fragment가 재개되면 자동 슬라이드를 다시 시작합니다.
+    }
+
 
 
     /*
