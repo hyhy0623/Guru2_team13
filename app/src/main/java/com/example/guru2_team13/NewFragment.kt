@@ -339,11 +339,11 @@ class NewFragment : Fragment() {
     private fun sendDataToMyNewActivity(buttonDataList: List<ButtonData>) {
         val intent = Intent(requireActivity(), MyNewProductActivity::class.java)
         intent.putExtra("button_data_list", ArrayList(buttonDataList))
-        requireActivity().startActivity(intent)
+        requireActivity().intent = intent
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
+    override fun onPause() {
+        super.onPause()
 
         sendDataToMyNewActivity(buttonDataList)
     }
