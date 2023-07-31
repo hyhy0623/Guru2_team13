@@ -29,7 +29,7 @@
                     android:text="제목" />
 
                 <TextView
-                    android:layout_width="290dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
                     android:text="밀키스에이드 내가 먹어봄 욤뇸" />
