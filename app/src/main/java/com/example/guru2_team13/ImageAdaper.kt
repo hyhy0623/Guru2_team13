@@ -1,5 +1,6 @@
 package com.example.guru2_team13
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -59,6 +60,15 @@ class ImageAdapter : RecyclerView.Adapter<ImageAdapter.ViewHolder>() {
         private val recipeName: TextView = itemView.findViewById(R.id.recipeName)
         private val recipeImage: ImageButton = itemView.findViewById(R.id.recipeButton)
 
+        init {
+            recipeImage.setOnClickListener {
+                val position = adapterPosition
+                if(position != RecyclerView.NO_POSITION) {
+                    val item = items[position]
+                    openDetailActivity(item)
+                }
+            }
+        }
         fun setItem(item: Recipe) {
             // 레시피 이름 적용
             recipeName.text = item.name
@@ -76,6 +86,43 @@ class ImageAdapter : RecyclerView.Adapter<ImageAdapter.ViewHolder>() {
 
             }
 
+            recipeImage.id = item.btnId
+
+        }
+
+        private fun openDetailActivity(item: Recipe) {
+            if (recipeImage.id == 11) {
+                val intent = Intent(itemView.context, BoardDetail::class.java)
+                itemView.context.startActivity(intent)
+            }
+            if (recipeImage.id == 22) {
+                val intent = Intent(itemView.context, BoardDetail2::class.java)
+                itemView.context.startActivity(intent)
+            }
+            if (recipeImage.id == 33) {
+                val intent = Intent(itemView.context, BoardDetail3::class.java)
+                itemView.context.startActivity(intent)
+            }
+            if (recipeImage.id == 44) {
+                val intent = Intent(itemView.context, BoardDetail4::class.java)
+                itemView.context.startActivity(intent)
+            }
+            if (recipeImage.id == 55) {
+                val intent = Intent(itemView.context, BoardDetail5::class.java)
+                itemView.context.startActivity(intent)
+            }
+            if (recipeImage.id == 66) {
+                val intent = Intent(itemView.context, BoardDetail6::class.java)
+                itemView.context.startActivity(intent)
+            }
+            if (recipeImage.id == 77) {
+                val intent = Intent(itemView.context, BoardDetail7::class.java)
+                itemView.context.startActivity(intent)
+            }
+            if (recipeImage.id == 88) {
+                val intent = Intent(itemView.context, BoardDetail8::class.java)
+                itemView.context.startActivity(intent)
+            }
         }
     }
 }

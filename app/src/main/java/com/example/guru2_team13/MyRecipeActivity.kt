@@ -44,28 +44,28 @@ class MyRecipeActivity : AppCompatActivity() {
 
         // 체크 박스 받아오기
         if (recipeViewData.Mark1Checked == true) {
-            adapter.addItem(Recipe("마크정식", "recipe1"))
+            adapter.addItem(Recipe("마크정식", "recipe1", 11))
         }
         if (recipeViewData.Mark2Checked == true) {
-            adapter.addItem(Recipe("불닭장칼국수", "recipe2"))
+            adapter.addItem(Recipe("불닭장칼국수", "recipe2", 22))
         }
         if (recipeViewData.Mark3Checked == true) {
-            adapter.addItem(Recipe("딸기수박에이드", "recipe3"))
+            adapter.addItem(Recipe("딸기수박에이드", "recipe3", 33))
         }
         if (recipeViewData.Mark4Checked == true) {
-            adapter.addItem(Recipe("불닭짜파게티", "recipe4"))
+            adapter.addItem(Recipe("불닭짜파게티", "recipe4", 44))
         }
         if (recipeViewData.Mark5Checked == true) {
-            adapter.addItem(Recipe("소치콘볶이", "recipe5"))
+            adapter.addItem(Recipe("소치콘볶이", "recipe5", 55))
         }
         if (recipeViewData.Mark6Checked == true) {
-            adapter.addItem(Recipe("돼지게티", "recipe6"))
+            adapter.addItem(Recipe("돼지게티", "recipe6", 66))
         }
         if (recipeViewData.Mark7Checked == true) {
-            adapter.addItem(Recipe("밀키스에이드", "recipe7"))
+            adapter.addItem(Recipe("밀키스에이드", "recipe7", 77))
         }
         if (recipeViewData.Mark8Checked == true) {
-            adapter.addItem(Recipe("헤이즐넛바나나", "recipe8"))
+            adapter.addItem(Recipe("헤이즐넛바나나", "recipe8", 88))
         }
 
         // 리사이클러뷰 업데이트
