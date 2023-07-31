@@ -4,6 +4,7 @@ import android.R.attr.data
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -68,6 +69,18 @@ class MypageFragment : Fragment() {
         // Inflate the layout for this fragment
 
         val view = inflater.inflate(R.layout.fragment_mypage, container, false)
+
+        // 프래그먼트 내에서 뒤로가기 버튼 이벤트를 소비
+        view.isFocusableInTouchMode = true
+        view.requestFocus()
+        view.setOnKeyListener { _, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
+                // 뒤로가기 버튼 이벤트를 소비하여 뒤로가지 않음
+                true
+            } else {
+                false
+            }
+        }
 
         btn1_Myp = view.findViewById(R.id.btn1_Myp)
         btn2_Myp = view.findViewById(R.id.btn2_Myp)
