@@ -8,6 +8,9 @@ import android.widget.ImageButton
 
 class MyWriteRecipeActivity : AppCompatActivity() {
     lateinit var recipeButton1: ImageButton
+    lateinit var recipeButton2: ImageButton
+    lateinit var recipeButton7: ImageButton
+    lateinit var recipeButton8: ImageButton
 
     val recipeViewData = RecipeViewModel.getInstance()
     lateinit var m_1: CheckBox
@@ -20,6 +23,9 @@ class MyWriteRecipeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_my_write_recipe)
 
         recipeButton1 = findViewById(R.id.recipeButton1)
+        recipeButton2 = findViewById(R.id.recipeButton2)
+        recipeButton7 = findViewById(R.id.recipeButton7)
+        recipeButton8 = findViewById(R.id.recipeButton8)
 
         m_1 = findViewById(R.id.m_1)
         m_2 =findViewById(R.id.m_2)
@@ -28,6 +34,18 @@ class MyWriteRecipeActivity : AppCompatActivity() {
 
         recipeButton1.setOnClickListener {
             var intent = Intent(this, BoardDetail::class.java)
+            startActivity(intent)
+        }
+        recipeButton2.setOnClickListener {
+            var intent = Intent(this, BoardDetail2::class.java)
+            startActivity(intent)
+        }
+        recipeButton7.setOnClickListener {
+            var intent = Intent(this, BoardDetail7::class.java)
+            startActivity(intent)
+        }
+        recipeButton8.setOnClickListener {
+            var intent = Intent(this, BoardDetail8::class.java)
             startActivity(intent)
         }
 
