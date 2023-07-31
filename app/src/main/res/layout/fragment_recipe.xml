@@ -53,7 +53,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <!-- 마크정식 불닭장칼국수 -->
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -80,13 +79,13 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="145dp"
+                            android:layout_width="125dp"
                             android:layout_height="wrap_content"
-                            android:text="마크정식"
-                            android:textSize="15dp"/>
+                            android:text="     마크정식"
+                            android:textSize="15dp" />
 
                         <CheckBox
-                            android:layout_width="match_parent"
+                            android:layout_width="20dp"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
@@ -114,13 +113,13 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="145dp"
+                            android:layout_width="125dp"
                             android:layout_height="wrap_content"
-                            android:text="불닭장칼국수"
-                            android:textSize="15dp"/>
+                            android:text="     불닭장칼국수"
+                            android:textSize="15dp" />
 
                         <CheckBox
-                            android:layout_width="match_parent"
+                            android:layout_width="20dp"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
@@ -155,13 +154,13 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="145dp"
+                            android:layout_width="125dp"
                             android:layout_height="wrap_content"
-                            android:text="딸기수박에이드"
-                            android:textSize="15dp"/>
+                            android:text="     딸기수박에이드"
+                            android:textSize="15dp" />
 
                         <CheckBox
-                            android:layout_width="match_parent"
+                            android:layout_width="20dp"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
@@ -189,13 +188,13 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="145dp"
+                            android:layout_width="125dp"
                             android:layout_height="wrap_content"
-                            android:text="불닭짜파게티"
+                            android:text="     불닭짜파게티"
                             android:textSize="15dp"/>
 
                         <CheckBox
-                            android:layout_width="match_parent"
+                            android:layout_width="20dp"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
@@ -230,13 +229,13 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="145dp"
+                            android:layout_width="125dp"
                             android:layout_height="wrap_content"
-                            android:text="소치콘볶이"
+                            android:text="     소치콘볶이"
                             android:textSize="15dp"/>
 
                         <CheckBox
-                            android:layout_width="match_parent"
+                            android:layout_width="20dp"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
@@ -264,13 +263,13 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="145dp"
+                            android:layout_width="125dp"
                             android:layout_height="wrap_content"
-                            android:text="돼지게티"
+                            android:text="     돼지게티"
                             android:textSize="15dp"/>
 
                         <CheckBox
-                            android:layout_width="match_parent"
+                            android:layout_width="20dp"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
@@ -306,13 +305,13 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="145dp"
+                            android:layout_width="125dp"
                             android:layout_height="wrap_content"
-                            android:text="밀키스에이드"
+                            android:text="     밀키스에이드"
                             android:textSize="15dp"/>
 
                         <CheckBox
-                            android:layout_width="match_parent"
+                            android:layout_width="20dp"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"
@@ -340,13 +339,13 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="145dp"
+                            android:layout_width="125dp"
                             android:layout_height="wrap_content"
-                            android:text="헤이즐넛바나나"
+                            android:text="     헤이즐넛바나나"
                             android:textSize="15dp"/>
 
                         <CheckBox
-                            android:layout_width="match_parent"
+                            android:layout_width="20dp"
                             android:layout_height="match_parent"
                             android:button="@android:color/transparent"
                             android:background="@drawable/checkbox_bookmark"

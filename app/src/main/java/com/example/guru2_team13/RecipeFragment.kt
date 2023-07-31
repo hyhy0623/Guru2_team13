@@ -155,8 +155,11 @@ class RecipeFragment : Fragment() {
             var intent = Intent(activity, BoardDetail8::class.java)
             startActivity(intent)
         }
+
         searchButton_recipe.setOnClickListener {
-            Toast.makeText(requireContext(), "기능 구현 예정입니다.", Toast.LENGTH_SHORT).show()
+            // Toast.makeText(requireContext(), "기능 구현 예정입니다.", Toast.LENGTH_SHORT).show()
+            var intent = Intent(activity, SearchList::class.java)
+            startActivity(intent)
         }
 
         //Log.d("RecipeFragment", "Mark1Checked: ${recipeViewModel.Mark1Checked}")
