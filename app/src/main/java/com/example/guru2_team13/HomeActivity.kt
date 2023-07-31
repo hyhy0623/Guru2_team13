@@ -7,6 +7,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
+import androidx.fragment.app.FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
+import androidx.viewpager.widget.PagerAdapter
+import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -53,7 +59,6 @@ class HomeActivity : AppCompatActivity() {
                     if (mark1 != null) {
                         mark1.isChecked = recipeViewModel.Mark1Checked
                     }
-
                 }
                 R.id.mypage_bar -> {
                     val mypageFragment = MypageFragment()
@@ -63,7 +68,6 @@ class HomeActivity : AppCompatActivity() {
                     mypageFragment.arguments = bundle
 
                     supportFragmentManager.beginTransaction().replace(R.id.fl_container, mypageFragment).commit()
-
                 }
             }
             true
@@ -77,5 +81,4 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }*/
     }
-
 }

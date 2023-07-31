@@ -6,19 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".BoardWrite">
-
-    <!-- fab 버튼 -->
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab_menu"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|right"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:clickable="true"-->
-<!--        android:backgroundTint="#1C27FF"-->
-<!--        app:srcCompat="@drawable/menu"-->
-<!--        app:tint="@color/white"/>-->
+    tools:context=".BoardDetail2">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -44,14 +32,13 @@
                     android:layout_width="290dp"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="딸기수박에이드" />
+                    android:text="불닭장칼국수 만드는 법" />
 
                 <CheckBox
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:button="@android:color/transparent"
-                    android:background="@drawable/checkbox_bookmark"
-                    android:checked="true"/>
+                    android:background="@drawable/checkbox_bookmark" />
             </LinearLayout>
 
             <View
@@ -62,14 +49,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/recipe1"
+                android:src="@drawable/recipe2"
                 android:layout_marginTop="10dp"/>
 
             <TextView
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="초간단 딸기수박에이드 만들기\n\n준비물:빙그레 뚱단지 딸기우유, 수박 에이드, 컵과 얼음\n*수박 에이드는 CU에서 구매했어요\n*편의점에서 파는 얼음컵도 좋아요\n\n비율 1대1로 해서 넣으면 딸기수박에이드 완성!"
+                android:text="멸치칼국수 + 불닭볶음면 조합 = 불닭장칼국수\n맵칼시원하대 좀 개운한 불닭볶음탕면st인가봐\n\n예전에도 핫했던 레시피\n기본적으로 불닭볶음면이랑 멸치칼국수가 1:1로 하나씩 있으면 된대\n\n라면 두개 양이 부담스러우면\n멸치칼국수에 불달소스만 추가해도 될듯 츄베릅\n\n국물 한 숟가락 뜨시면\n흐허허허허어어어어~~~ 소리가 나와야 지대임\n\n비가 와서 우중충한 오늘같이 얼~크~흔~한 게 당길 때\n불닭장칼국수 한 그릇 어때?"
                 android:background="#00ff0000"/>
         </LinearLayout>
     </ScrollView>

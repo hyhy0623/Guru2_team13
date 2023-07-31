@@ -14,6 +14,7 @@ import android.widget.Adapter
 import android.widget.Button
 import androidx.core.content.ContextCompat.startActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import me.relex.circleindicator.CircleIndicator3
@@ -55,6 +56,11 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private fun showTab(tabId: Int) {
+        // BottomNavigationView에서 탭을 보여주는 함수
+        // 예: 탭에 해당하는 동작 수행
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -71,6 +77,8 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        val bottomNavigationView: BottomNavigationView = requireActivity().findViewById(R.id.bnv_main)
         /*
         val viewPagerAd = rootView.findViewById(R.id.viewPager_ad)
         val adImages = getAdImages() // 광고에 사용할 이미지들을 가져오는 메서드
@@ -87,11 +95,16 @@ class HomeFragment : Fragment() {
         GS_Btn = view.findViewById(R.id.GS_Btn)
         SE_Btn = view.findViewById(R.id.SE_Btn)
 
+        // 초기 탭으로 Home 탭을 선택
+        // bottomNavigationView.selectedItemId = R.id.home_bar
+
         fab.setOnClickListener {
             val intent = Intent(getActivity(), MapActivity::class.java)
             startActivity(intent)
         }
         recipe_Btn.setOnClickListener {
+            bottomNavigationView.selectedItemId = R.id.recipe_bar
+
             val recipeFragment = RecipeFragment()
             val transaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.fl_container, recipeFragment)
@@ -105,6 +118,8 @@ class HomeFragment : Fragment() {
 //            startActivity(intent)
         }
         CU_Btn.setOnClickListener {
+            bottomNavigationView.selectedItemId = R.id.new_bar
+
             val newFragment = NewFragment()
             val transaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.fl_container, newFragment)
@@ -115,6 +130,8 @@ class HomeFragment : Fragment() {
 //            startActivity(intent)
         }
         GS_Btn.setOnClickListener {
+            bottomNavigationView.selectedItemId = R.id.new_bar
+
             val newFragment = NewFragment()
             val transaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.fl_container, newFragment)
@@ -125,6 +142,8 @@ class HomeFragment : Fragment() {
 //            startActivity(intent)
         }
         SE_Btn.setOnClickListener {
+            bottomNavigationView.selectedItemId = R.id.new_bar
+
             val newFragment = NewFragment()
             val transaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.fl_container, newFragment)

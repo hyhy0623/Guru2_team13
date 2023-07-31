@@ -6,19 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".BoardDetail">
-
-    <!-- fab 버튼 -->
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab_menu"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|right"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:clickable="true"-->
-<!--        android:backgroundTint="#1C27FF"-->
-<!--        app:srcCompat="@drawable/menu"-->
-<!--        app:tint="@color/white"/>-->
+    tools:context=".BoardDetail4">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -44,7 +32,7 @@
                     android:layout_width="290dp"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="마크정식 존맛탱구리" />
+                    android:text="짜파구리보다 더 맛있는 불닭짜파게티" />
 
                 <CheckBox
                     android:layout_width="match_parent"
@@ -61,14 +49,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/recipe1"
+                android:src="@drawable/recipe4"
                 android:layout_marginTop="10dp"/>
 
             <TextView
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="갓세븐 마크정식 레시피\n\n~이 레시피는 갓세븐 마크와 1도 연관이 없으나 깃세븐 마크 빠수니가 만들었기때문에 마크정식입니다~\n\n재료 준비 : 콕콕콕 스파게티, 자이언트 떡볶이, 치즈, 의성마늘후랑크\n\n(1) 떡볶이와 스파게티 제조 후 두 개를 섞~섞~ 골고루 잘 섞어줍니다.\n(2) 그 위에 소세지를 썰어서 올려주고 치르를 뿌려줍니다.\n(3) 치즈가 녹을 수 있도록 뚜껑을 살짝 덮고 전자렌지에 30초 정도 돌려줍니다.\n\n뚜껑을 열면 완성!!!!!!!!!!"
+                android:text="불닭게티는 딱히 재료라고는 없어요!\n불닭볶음면 그리고 짜파게티만 있으면 끝!\n여기에 더 맛있게 먹고 싶으면 계란 추가:)\n\n소스는 각각 일단 빼두고 물을 부어주세요!\n면이 다 익으면 물을 조금만 남기고 나머지는 다 버리고\n짜파게티 스프를 넣어서 쓱쓱 비벼주세요!\n불닭볶음면 소스는 우선 나중에 맵기 조절을 위해 빼고\n짜파게티 스프만 넣어서 잘 섞어주세요!\n\n윤기 잘잘 잘 비벼진 짜파게티 위에다가 불닭볶음면 소스로 맵기를 조절하면 완성!"
                 android:background="#00ff0000"/>
         </LinearLayout>
     </ScrollView>

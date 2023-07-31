@@ -32,7 +32,13 @@ class RecipeFragment : Fragment() {
 
     lateinit var fab_write: FloatingActionButton
     lateinit var recipeButton1: ImageButton
+    lateinit var recipeButton2: ImageButton
     lateinit var recipeButton3: ImageButton
+    lateinit var recipeButton4: ImageButton
+    lateinit var recipeButton5: ImageButton
+    lateinit var recipeButton6: ImageButton
+    lateinit var recipeButton7: ImageButton
+    lateinit var recipeButton8: ImageButton
     lateinit var searchButton_recipe: ImageButton
 
     lateinit var mark1: CheckBox
@@ -99,11 +105,14 @@ class RecipeFragment : Fragment() {
 
         fab_write = view.findViewById(com.example.guru2_team13.R.id.fab_write)
         recipeButton1 = view.findViewById(com.example.guru2_team13.R.id.recipeButton1)
+        recipeButton2 = view.findViewById(com.example.guru2_team13.R.id.recipeButton2)
         recipeButton3 = view.findViewById(com.example.guru2_team13.R.id.recipeButton3)
+        recipeButton4 = view.findViewById(com.example.guru2_team13.R.id.recipeButton4)
+        recipeButton5 = view.findViewById(com.example.guru2_team13.R.id.recipeButton5)
+        recipeButton6 = view.findViewById(com.example.guru2_team13.R.id.recipeButton6)
+        recipeButton7 = view.findViewById(com.example.guru2_team13.R.id.recipeButton7)
+        recipeButton8 = view.findViewById(com.example.guru2_team13.R.id.recipeButton8)
         searchButton_recipe = view.findViewById(com.example.guru2_team13.R.id.btnSearch_recipe)
-
-
-
 
         fab_write.setOnClickListener {
             var intent = Intent(activity, BoardWrite::class.java)
@@ -114,8 +123,36 @@ class RecipeFragment : Fragment() {
             var intent = Intent(activity, BoardDetail::class.java)
             startActivity(intent)
         }
-        recipeButton3.setOnClickListener {
+        recipeButton2.setOnClickListener {
             var intent = Intent(activity, BoardDetail2::class.java)
+            startActivity(intent)
+        }
+        recipeButton3.setOnClickListener {
+            var intent = Intent(activity, BoardDetail3::class.java)
+            startActivity(intent)
+        }
+        recipeButton4.setOnClickListener {
+            var intent = Intent(activity, BoardDetail4::class.java)
+            startActivity(intent)
+        }
+        recipeButton4.setOnClickListener {
+            var intent = Intent(activity, BoardDetail4::class.java)
+            startActivity(intent)
+        }
+        recipeButton5.setOnClickListener {
+            var intent = Intent(activity, BoardDetail5::class.java)
+            startActivity(intent)
+        }
+        recipeButton6.setOnClickListener {
+            var intent = Intent(activity, BoardDetail6::class.java)
+            startActivity(intent)
+        }
+        recipeButton7.setOnClickListener {
+            var intent = Intent(activity, BoardDetail7::class.java)
+            startActivity(intent)
+        }
+        recipeButton8.setOnClickListener {
+            var intent = Intent(activity, BoardDetail8::class.java)
             startActivity(intent)
         }
         searchButton_recipe.setOnClickListener {
