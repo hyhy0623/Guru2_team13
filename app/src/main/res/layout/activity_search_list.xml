@@ -22,7 +22,8 @@
                 android:id="@+id/searchEditText"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
-                android:hint="레시피를 입력하세요." />
+                android:hint="레시피를 입력하세요."
+                android:paddingLeft="10dp"/>
 
             <ImageButton
                 android:id="@+id/searchButton"
