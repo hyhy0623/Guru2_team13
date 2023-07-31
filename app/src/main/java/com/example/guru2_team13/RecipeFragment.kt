@@ -209,6 +209,7 @@ class RecipeFragment : Fragment() {
 
         return view
     }
+
 /*
     override fun onDestroyView() {
         // 프래그먼트가 소멸될 때 체크박스 상태를 ViewModel에 저장

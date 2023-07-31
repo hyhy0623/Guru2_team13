@@ -35,10 +35,11 @@
                     android:text="짜파구리보다 더 맛있는 불닭짜파게티" />
 
                 <CheckBox
+                    android:id="@+id/mark_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/checkbox_bookmark" />
+                    android:background="@drawable/checkbox_bookmark"
+                    android:button="@android:color/transparent" />
             </LinearLayout>
 
             <View

@@ -35,10 +35,11 @@
                     android:text="소치콘볶이 뭔지 아는 사람?!" />
 
                 <CheckBox
+                    android:id="@+id/mark_5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/checkbox_bookmark" />
+                    android:background="@drawable/checkbox_bookmark"
+                    android:button="@android:color/transparent" />
             </LinearLayout>
 
             <View

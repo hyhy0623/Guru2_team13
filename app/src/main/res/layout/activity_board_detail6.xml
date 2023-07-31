@@ -2,10 +2,11 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mark_6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".BoardDetail6">
 
     <ScrollView
@@ -37,27 +38,27 @@
                 <CheckBox
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/checkbox_bookmark" />
+                    android:background="@drawable/checkbox_bookmark"
+                    android:button="@android:color/transparent" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3px"
-                android:background="@color/black"/>
+                android:background="@color/black" />
 
             <ImageView
                 android:layout_width="350dp"
                 android:layout_height="300dp"
-                android:src="@drawable/norecipe6"
-                android:paddingTop="10dp"/>
+                android:paddingTop="10dp"
+                android:src="@drawable/norecipe6" />
 
             <TextView
-                android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="편의점 꿀 조합 돼지게티 만들기.\n매콤함과 꾸덕꾸덕한 지즈의 환상적인 조합.\n\n집 밥 먹기 싫고, 귀찮은 날.\n한 끼 뚝딱 해결할 수 있는 편의점 레시피.\n\n[재료]\n미트볼, 막창, 스파게티 컵라면, 소시지, 체더치즈, 스트링 치즈\n\n[만드는 방법]\n1. 스파게티 컵라면 조리해두기.\n2. 미트볼, 막창을 전자레인지 1분 30초씩 데워주기.\n3. 스파게티 면 위로 미트볼, 막창 올려주기.\n4. 치즈들로 이불 덮어준 뒤 전자레인지 3분 돌리면 완성!\n\n매콤한 돼지게티로 간단하게 즐기고\n재충전해 보시길 바라요. :)"
-                android:background="#00ff0000"/>
+                android:background="#00ff0000"
+                android:padding="16dp"
+                android:text="편의점 꿀 조합 돼지게티 만들기.\n매콤함과 꾸덕꾸덕한 지즈의 환상적인 조합.\n\n집 밥 먹기 싫고, 귀찮은 날.\n한 끼 뚝딱 해결할 수 있는 편의점 레시피.\n\n[재료]\n미트볼, 막창, 스파게티 컵라면, 소시지, 체더치즈, 스트링 치즈\n\n[만드는 방법]\n1. 스파게티 컵라면 조리해두기.\n2. 미트볼, 막창을 전자레인지 1분 30초씩 데워주기.\n3. 스파게티 면 위로 미트볼, 막창 올려주기.\n4. 치즈들로 이불 덮어준 뒤 전자레인지 3분 돌리면 완성!\n\n매콤한 돼지게티로 간단하게 즐기고\n재충전해 보시길 바라요. :)" />
         </LinearLayout>
     </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

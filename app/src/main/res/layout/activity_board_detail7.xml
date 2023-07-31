@@ -35,10 +35,11 @@
                     android:text="밀키스에이드 내가 먹어봄 욤뇸" />
 
                 <CheckBox
+                    android:id="@+id/mark_7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/checkbox_bookmark" />
+                    android:background="@drawable/checkbox_bookmark"
+                    android:button="@android:color/transparent" />
             </LinearLayout>
 
             <View

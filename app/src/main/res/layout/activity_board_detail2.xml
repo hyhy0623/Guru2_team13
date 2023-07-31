@@ -35,10 +35,11 @@
                     android:text="불닭장칼국수 만드는 법" />
 
                 <CheckBox
+                    android:id="@+id/mark_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/checkbox_bookmark" />
+                    android:background="@drawable/checkbox_bookmark"
+                    android:button="@android:color/transparent" />
             </LinearLayout>
 
             <View
