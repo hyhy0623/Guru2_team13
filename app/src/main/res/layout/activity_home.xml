@@ -57,7 +57,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize" android:id="@+id/bnv_main" android:background="#FFFFFF"
-        app:menu="@menu/main_menu_bottom" app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/main_menu_bottom" app:itemIconSize="40dp" app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
         app:labelVisibilityMode="unlabeled" app:itemActiveIndicatorStyle="@android:color/transparent"/>
 
