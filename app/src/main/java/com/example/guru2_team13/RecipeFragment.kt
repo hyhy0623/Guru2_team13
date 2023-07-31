@@ -3,6 +3,7 @@ package com.example.guru2_team13
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -68,6 +69,18 @@ class RecipeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_recipe, container, false)
+
+        // 프래그먼트 내에서 뒤로가기 버튼 이벤트를 소비
+        view.isFocusableInTouchMode = true
+        view.requestFocus()
+        view.setOnKeyListener { _, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
+                // 뒤로가기 버튼 이벤트를 소비하여 뒤로가지 않음
+                true
+            } else {
+                false
+            }
+        }
 
         mark1 = view.findViewById<CheckBox>(R.id.recipe_mark1)
         mark2 = view.findViewById<CheckBox>(R.id.recipe_mark2)

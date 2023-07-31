@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -76,9 +77,22 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+
         // Inflate the layout for this fragment
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        // 프래그먼트 내에서 뒤로가기 버튼 이벤트를 소비
+        view.isFocusableInTouchMode = true
+        view.requestFocus()
+        view.setOnKeyListener { _, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
+                // 뒤로가기 버튼 이벤트를 소비하여 뒤로가지 않음
+                true
+            } else {
+                false
+            }
+        }
 
         val bottomNavigationView: BottomNavigationView = requireActivity().findViewById(R.id.bnv_main)
         /*
@@ -110,7 +124,7 @@ class HomeFragment : Fragment() {
             val recipeFragment = RecipeFragment()
             val transaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.fl_container, recipeFragment)
-            transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
+            //transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
             transaction.commit()
 
 //            val recipeFragment = RecipeFragment()
@@ -129,7 +143,7 @@ class HomeFragment : Fragment() {
             val transaction = parentFragmentManager.beginTransaction()
             newFragment.setArguments(bundle)
             transaction.replace(R.id.fl_container, newFragment)
-            transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
+            //transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
             transaction.commit()
 
 //            var intent = Intent(activity, NewCU::class.java)
@@ -145,7 +159,7 @@ class HomeFragment : Fragment() {
             val transaction = parentFragmentManager.beginTransaction()
             newFragment.setArguments(bundle)
             transaction.replace(R.id.fl_container, newFragment)
-            transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
+            //transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
             transaction.commit()
 
 //            var intent = Intent(activity, NewGS::class.java)
@@ -161,7 +175,7 @@ class HomeFragment : Fragment() {
             val transaction = parentFragmentManager.beginTransaction()
             newFragment.setArguments(bundle)
             transaction.replace(R.id.fl_container, newFragment)
-            transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
+            //transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
             transaction.commit()
 
 //            var intent = Intent(activity, NewSeven::class.java)
@@ -203,9 +217,6 @@ class HomeFragment : Fragment() {
         super.onResume()
         startAutoSlide() // Fragment가 재개되면 자동 슬라이드를 다시 시작합니다.
     }
-
-
-
     /*
         val tabLayout = view.findViewById<TabLayout>(R.id.tabs)
         TabLayoutMediator(tabLayout, mViewPager) { tab, position ->
