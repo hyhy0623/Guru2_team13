@@ -186,6 +186,8 @@ class NewFragment : Fragment() {
 
         //sendDataToMyNewActivity(buttonDataList)
 
+        rdoAll.isChecked = true
+
         if (getArguments() != null)
         {
             var cuBtn = getArguments()?.getString("cuBtn") // 프래그먼트1에서 받아온 값 넣기
