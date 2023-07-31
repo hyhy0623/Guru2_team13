@@ -27,10 +27,10 @@ class MyWriteRecipeActivity : AppCompatActivity() {
         recipeButton7 = findViewById(R.id.recipeButton7)
         recipeButton8 = findViewById(R.id.recipeButton8)
 
-        m_1 = findViewById(R.id.m_1)
-        m_2 =findViewById(R.id.m_2)
-        m_3 = findViewById(R.id.m_3)
-        m_4 = findViewById(R.id.m_4)
+//        m_1 = findViewById(R.id.m_1)
+//        m_2 =findViewById(R.id.m_2)
+//        m_3 = findViewById(R.id.m_3)
+//        m_4 = findViewById(R.id.m_4)
 
         recipeButton1.setOnClickListener {
             var intent = Intent(this, BoardDetail::class.java)
@@ -50,37 +50,37 @@ class MyWriteRecipeActivity : AppCompatActivity() {
         }
 
         // 체크 박스 받아오기
-        if (recipeViewData.Mark1Checked == true) {
-            m_1.isChecked = true
-            m_1.isEnabled = false
-        }
-        else {
-            m_1.isChecked = false
-            m_1.isEnabled = false
-        }
-        if (recipeViewData.Mark2Checked == true) {
-            m_2.isChecked = true
-            m_2.isEnabled = false
-        }
-        else {
-            m_2.isChecked = false
-            m_2.isEnabled = false
-        }
-        if (recipeViewData.Mark7Checked == true) {
-            m_3.isChecked = true
-            m_3.isEnabled = false
-        }
-        else {
-            m_3.isChecked = false
-            m_3.isEnabled = false
-        }
-        if (recipeViewData.Mark8Checked == true) {
-            m_4.isChecked = true
-            m_4.isEnabled = false
-        }
-        else {
-            m_4.isChecked = false
-            m_4.isEnabled = false
-        }
+//        if (recipeViewData.Mark1Checked == true) {
+//            m_1.isChecked = true
+//            m_1.isEnabled = false
+//        }
+//        else {
+//            m_1.isChecked = false
+//            m_1.isEnabled = false
+//        }
+//        if (recipeViewData.Mark2Checked == true) {
+//            m_2.isChecked = true
+//            m_2.isEnabled = false
+//        }
+//        else {
+//            m_2.isChecked = false
+//            m_2.isEnabled = false
+//        }
+//        if (recipeViewData.Mark7Checked == true) {
+//            m_3.isChecked = true
+//            m_3.isEnabled = false
+//        }
+//        else {
+//            m_3.isChecked = false
+//            m_3.isEnabled = false
+//        }
+//        if (recipeViewData.Mark8Checked == true) {
+//            m_4.isChecked = true
+//            m_4.isEnabled = false
+//        }
+//        else {
+//            m_4.isChecked = false
+//            m_4.isEnabled = false
+//        }
     }
 }
