@@ -135,10 +135,6 @@ class RecipeFragment : Fragment() {
             var intent = Intent(activity, BoardDetail4::class.java)
             startActivity(intent)
         }
-        recipeButton4.setOnClickListener {
-            var intent = Intent(activity, BoardDetail4::class.java)
-            startActivity(intent)
-        }
         recipeButton5.setOnClickListener {
             var intent = Intent(activity, BoardDetail5::class.java)
             startActivity(intent)
