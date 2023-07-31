@@ -14,6 +14,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.LinearLayout
 import androidx.core.content.ContextCompat.startActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -47,6 +49,10 @@ class HomeFragment : Fragment() {
     lateinit var CU_Btn: Button
     lateinit var GS_Btn: Button
     lateinit var SE_Btn: Button
+    lateinit var recipe1 : ImageButton
+    lateinit var recipe2 : ImageButton
+    lateinit var recipe3 : ImageButton
+    lateinit var recipe4 : ImageButton
 
     private val autoSlideHandler = Handler()
     private val autoSlideRunnable = object : Runnable {
@@ -110,6 +116,29 @@ class HomeFragment : Fragment() {
         CU_Btn = view.findViewById(R.id.CU_Btn)
         GS_Btn = view.findViewById(R.id.GS_Btn)
         SE_Btn = view.findViewById(R.id.SE_Btn)
+
+        recipe1 = view.findViewById(R.id.recipeButton1)
+        recipe2 = view.findViewById(R.id.recipeButton2)
+        recipe3 = view.findViewById(R.id.recipeButton3)
+        recipe4 = view.findViewById(R.id.recipeButton4)
+
+        // 레시피 사진 클릭시 상세 페이지로 이동
+        recipe1.setOnClickListener{
+            val intent = Intent(getActivity(), BoardDetail::class.java)
+            startActivity(intent)
+        }
+        recipe2.setOnClickListener{
+            val intent = Intent(getActivity(), BoardDetail2::class.java)
+            startActivity(intent)
+        }
+        recipe3.setOnClickListener{
+            val intent = Intent(getActivity(), BoardDetail3::class.java)
+            startActivity(intent)
+        }
+        recipe4.setOnClickListener{
+            val intent = Intent(getActivity(), BoardDetail4::class.java)
+            startActivity(intent)
+        }
 
         // 초기 탭으로 Home 탭을 선택
         // bottomNavigationView.selectedItemId = R.id.home_bar
