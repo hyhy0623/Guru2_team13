@@ -1,22 +1,17 @@
 package com.example.guru2_team13
 
+import android.R.id.edit
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.Button
-import androidx.core.content.ContextCompat.startActivity
+import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 import me.relex.circleindicator.CircleIndicator3
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -106,7 +101,11 @@ class HomeFragment : Fragment() {
         }
         CU_Btn.setOnClickListener {
             val newFragment = NewFragment()
+            val bundle = Bundle() // 번들을 통해 값 전달
+            bundle.putString("cuBtn", "1")
+
             val transaction = parentFragmentManager.beginTransaction()
+            newFragment.setArguments(bundle)
             transaction.replace(R.id.fl_container, newFragment)
             transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
             transaction.commit()
@@ -116,7 +115,11 @@ class HomeFragment : Fragment() {
         }
         GS_Btn.setOnClickListener {
             val newFragment = NewFragment()
+            val bundle = Bundle() // 번들을 통해 값 전달
+            bundle.putString("gsBtn", "2")
+
             val transaction = parentFragmentManager.beginTransaction()
+            newFragment.setArguments(bundle)
             transaction.replace(R.id.fl_container, newFragment)
             transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
             transaction.commit()
@@ -126,7 +129,11 @@ class HomeFragment : Fragment() {
         }
         SE_Btn.setOnClickListener {
             val newFragment = NewFragment()
+            val bundle = Bundle() // 번들을 통해 값 전달
+            bundle.putString("seBtn", "3")
+
             val transaction = parentFragmentManager.beginTransaction()
+            newFragment.setArguments(bundle)
             transaction.replace(R.id.fl_container, newFragment)
             transaction.addToBackStack(null) // 이전 프래그먼트를 백스택에 추가
             transaction.commit()

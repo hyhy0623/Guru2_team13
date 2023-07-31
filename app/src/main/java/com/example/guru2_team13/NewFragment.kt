@@ -186,6 +186,79 @@ class NewFragment : Fragment() {
 
         //sendDataToMyNewActivity(buttonDataList)
 
+        if (getArguments() != null)
+        {
+            var cuBtn = getArguments()?.getString("cuBtn") // 프래그먼트1에서 받아온 값 넣기
+            var gsBtn = getArguments()?.getString("gsBtn") // 프래그먼트1에서 받아온 값 넣기
+            var seBtn = getArguments()?.getString("seBtn") // 프래그먼트1에서 받아온 값 넣기
+
+            if (cuBtn == "1") {
+                rdoCU.toggle()
+                view.findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                //cu 제외 나머지 편의점 신제품 숨김
+                view.findViewById<LinearLayout>(R.id.box_new2).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new3).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new5).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new6).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new8).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new9).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new11).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new12).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new14).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new15).visibility = View.GONE
+
+                // cu 신제품만 보이기
+                view.findViewById<LinearLayout>(R.id.box_new1).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new4).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new7).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new10).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new13).visibility = View.VISIBLE
+            }
+            if (gsBtn == "2") {
+                rdoGS.toggle()
+                view.findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                view.findViewById<LinearLayout>(R.id.box_new1).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new3).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new4).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new6).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new7).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new9).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new10).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new12).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new13).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new15).visibility = View.GONE
+
+                view.findViewById<LinearLayout>(R.id.box_new2).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new5).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new8).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new11).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new14).visibility = View.VISIBLE
+            }
+            if (seBtn == "3") {
+                rdoSE.toggle()
+                view.findViewById<ScrollView>(R.id.scrollView_new).smoothScrollTo(0, 0)
+
+                view.findViewById<LinearLayout>(R.id.box_new1).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new2).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new4).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new5).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new7).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new8).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new10).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new11).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new13).visibility = View.GONE
+                view.findViewById<LinearLayout>(R.id.box_new14).visibility = View.GONE
+
+                view.findViewById<LinearLayout>(R.id.box_new3).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new6).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new9).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new12).visibility = View.VISIBLE
+                view.findViewById<LinearLayout>(R.id.box_new15).visibility = View.VISIBLE
+            }
+        }
+
         // 편의점 구분 라디오 버튼
         rGroup1.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {

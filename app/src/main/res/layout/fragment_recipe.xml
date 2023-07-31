@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:textAlignment="center"
-            android:text="                레시피 게시판"
-            android:textSize="20dp"
+            android:text="            레시피 게시판"
+            android:textSize="25sp"
             android:textStyle="bold"/>
 
         <ImageButton
