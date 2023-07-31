@@ -132,12 +132,6 @@
                                 android:layout_height="wrap_content"
                                 android:text="     마크정식"
                                 android:textSize="15dp"/>
-
-                            <CheckBox
-                                android:layout_width="20dp"
-                                android:layout_height="match_parent"
-                                android:button="@android:color/transparent"
-                                android:background="@drawable/checkbox_bookmark" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -166,12 +160,6 @@
                                 android:layout_height="wrap_content"
                                 android:text="     불닭장칼국수"
                                 android:textSize="15dp"/>
-
-                            <CheckBox
-                                android:layout_width="20dp"
-                                android:layout_height="match_parent"
-                                android:button="@android:color/transparent"
-                                android:background="@drawable/checkbox_bookmark"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -204,12 +192,6 @@
                                 android:layout_height="wrap_content"
                                 android:text="     딸기수박에이드"
                                 android:textSize="15dp"/>
-
-                            <CheckBox
-                                android:layout_width="20dp"
-                                android:layout_height="match_parent"
-                                android:button="@android:color/transparent"
-                                android:background="@drawable/checkbox_bookmark" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -237,12 +219,6 @@
                                 android:layout_height="wrap_content"
                                 android:text="     불닭짜파게티"
                                 android:textSize="15dp"/>
-
-                            <CheckBox
-                                android:layout_width="20dp"
-                                android:layout_height="match_parent"
-                                android:button="@android:color/transparent"
-                                android:background="@drawable/checkbox_bookmark" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
