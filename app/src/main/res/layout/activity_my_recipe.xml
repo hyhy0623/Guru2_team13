@@ -22,7 +22,7 @@
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:text="                관심 레시피"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <ImageButton
@@ -47,8 +47,9 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="30dp">
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center">
 
 
     </androidx.recyclerview.widget.RecyclerView>
