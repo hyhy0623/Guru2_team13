@@ -6,19 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".BoardDetail">
-
-    <!-- fab 버튼 -->
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab_menu"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|right"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:clickable="true"-->
-<!--        android:backgroundTint="#1C27FF"-->
-<!--        app:srcCompat="@drawable/menu"-->
-<!--        app:tint="@color/white"/>-->
+    tools:context=".BoardDetail7">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -44,7 +32,7 @@
                     android:layout_width="290dp"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="마크정식 존맛탱구리" />
+                    android:text="밀키스에이드 내가 먹어봄 욤뇸" />
 
                 <CheckBox
                     android:layout_width="match_parent"
@@ -61,14 +49,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/recipe1"
+                android:src="@drawable/recipe3"
                 android:layout_marginTop="10dp"/>
 
             <TextView
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="갓세븐 마크정식 레시피\n\n~이 레시피는 갓세븐 마크와 1도 연관이 없으나 깃세븐 마크 빠수니가 만들었기때문에 마크정식입니다~\n\n재료 준비 : 콕콕콕 스파게티, 자이언트 떡볶이, 치즈, 의성마늘후랑크\n\n(1) 떡볶이와 스파게티 제조 후 두 개를 섞~섞~ 골고루 잘 섞어줍니다.\n(2) 그 위에 소세지를 썰어서 올려주고 치르를 뿌려줍니다.\n(3) 치즈가 녹을 수 있도록 뚜껑을 살짝 덮고 전자렌지에 30초 정도 돌려줍니다.\n\n뚜껑을 열면 완성!!!!!!!!!!"
+                android:text="나 밀키스? 개 사랑함.\n레몬에이드? 뭐 어느정도 좋아.\n\n두 개 조합 나쁘지 않을 것 같아서 편의점에서 밀키스랑 블루레몬 에이드 두 개씩 샀어\n\n소맥 말던 기술을 살려 제조제조\n\n블루레몬에이드 2 : 밀키스 1 로 해야된다는 평이 가장 많아서 2:1로 제조제조\n\n근데 요 색깔 모햐아~~~?\n휴양지에서 팔 것만 같은 칵테일 같고 뭐햐야~~~?\n\n그냥 블루레몬에이드 색깔도 여름바다와 하늘이 생각날 정도로 청량하지만,\n밀키스랑 섞으니 아날로그필터 씌어놓은것마냥\n몽환적인 늑힘과 청량한 늑힘 뿜뺌=3\n\n다들 한 번 도전해봐~~~"
                 android:background="#00ff0000"/>
         </LinearLayout>
     </ScrollView>
