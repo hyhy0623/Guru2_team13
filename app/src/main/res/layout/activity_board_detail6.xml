@@ -47,10 +47,10 @@
                 android:background="@color/black"/>
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/recipe6"
-                android:layout_marginTop="10dp"/>
+                android:layout_width="350dp"
+                android:layout_height="300dp"
+                android:src="@drawable/norecipe6"
+                android:paddingTop="10dp"/>
 
             <TextView
                 android:padding="16dp"

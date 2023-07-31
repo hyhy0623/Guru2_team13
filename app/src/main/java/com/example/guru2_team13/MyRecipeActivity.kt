@@ -9,8 +9,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MyRecipeActivity : AppCompatActivity() {
-    lateinit var recipeButton1: ImageButton
-    lateinit var recipeButton3: ImageButton
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ImageAdapter
